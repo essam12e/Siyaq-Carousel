@@ -1,4 +1,4 @@
-// Deliverables: versioning, contact sheet, continuity strip, ZIPs, sources.md, QC report.
+// Deliverables: versioning, contact sheet, continuity strip, ZIPs, internal sources record, QC report.
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -60,13 +60,15 @@ export function zipFiles(entries, outFile) {
 }
 function* walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) yield* walk(p); else yield p; } }
 
+export const INTERNAL_DIR = '_internal';
+
 export function writeSources(spec, outDir) {
   const src = spec.sources || [];
   if (!src.length) return null;
   const bad = src.filter((s) => !s.url || !/^https?:\/\//.test(s.url) || !s.title || !s.accessed);
   if (bad.length) throw new SiyaqError('SOURCES_INCOMPLETE', `بعض المصادر ناقصة (العنوان/الرابط/تاريخ الوصول): ${bad.map((b) => b.id || b.title || '?').join('، ')}`);
   const lines = [`# المصادر — ${spec.meta?.title || 'الكاروسيل'}`, '',
-    'هذا الملف يرافق التصميم ولا يظهر داخل الصور. كل معلومة واقعية في الشرائح مرتبطة بمصدرها هنا.', ''];
+    'سجل داخلي للبحث والتحقق: لا يظهر داخل الصور ولا يُضمَّن في ملفات التحميل، ويُسلَّم للمستخدم فقط إذا طلبه.', 'كل معلومة واقعية في الشرائح مرتبطة بمصدرها هنا.', ''];
   if (spec.research?.note) lines.push(`> ${spec.research.note}`, '');
   for (const s of src) {
     lines.push(`## [${s.id}] ${s.title}`, '',
@@ -78,7 +80,9 @@ export function writeSources(spec, outDir) {
   }
   const userFacts = spec.userProvidedFacts || [];
   if (userFacts.length) { lines.push('## معلومات قدّمها المستخدم (لم يتم التحقق منها بشكل مستقل)', ''); for (const f of userFacts) lines.push(`- ${f}`); lines.push(''); }
-  const file = path.join(outDir, 'sources.md');
+  // internal record only: kept out of the delivery folder root and out of every ZIP
+  const file = path.join(outDir, INTERNAL_DIR, 'sources.md');
+  fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, lines.filter((l) => l !== null).join('\n'));
   return file;
 }

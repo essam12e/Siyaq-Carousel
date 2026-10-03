@@ -204,6 +204,10 @@ ${s.css ? `<style>${s.css}</style>` : ''}
     fs.writeFileSync(file, html);
     docs.push({ index: i + 1, file, layout, exact: !!(s.exact ?? spec.exact) });
   }
-  fs.writeFileSync(path.join(sourceDir, 'carousel.json'), JSON.stringify(spec, null, 2));
-  return { canvas, theme, fonts, fontReport, assets: assets.used, docs, warnings, errors, n, u, band, cont, sourceDir, numerals, dir };
+  // the editable source package is a user download: research records (sources, notes, hook candidates) stay internal
+  const { sources: _s, userProvidedFacts: _u, research: _r, ...publicSpec } = spec;
+  const { hook: _h, ...publicMeta } = spec.meta || {};
+  fs.writeFileSync(path.join(sourceDir, 'carousel.json'), JSON.stringify({ ...publicSpec, ...(spec.meta ? { meta: publicMeta } : {}) }, null, 2));
+  if (mode !== 'preview') { const internal = path.join(outDir, '_internal'); fs.mkdirSync(internal, { recursive: true }); fs.writeFileSync(path.join(internal, 'carousel.json'), JSON.stringify(spec, null, 2)); }
+  return { spec, canvas, theme, fonts, fontReport, assets: assets.used, docs, warnings, errors, n, u, band, cont, sourceDir, numerals, dir };
 }

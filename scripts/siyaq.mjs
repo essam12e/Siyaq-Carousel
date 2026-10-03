@@ -10,7 +10,7 @@ import { readJSON, writeJSON, REGISTRY, ASSETS, SKILL_ROOT, SiyaqError, pad2, ex
 import { buildCarousel, loadPlatforms, loadIcons } from './lib/build.mjs';
 import { renderDocs, launchBrowser } from './lib/render.mjs';
 import { runQC } from './lib/qc.mjs';
-import { archiveSlides, contactSheet, strip, zipFiles, writeSources, writeQcMarkdown } from './lib/output.mjs';
+import { archiveSlides, contactSheet, strip, zipFiles, writeSources, writeQcMarkdown, INTERNAL_DIR } from './lib/output.mjs';
 import { loadStyles, validateCustomStyle, userStylesDir } from './lib/theme.mjs';
 import { fontRegistry, inspectFontFile, missingGlyphs } from './lib/fonts.mjs';
 import { LAYOUTS } from './lib/layouts.mjs';
@@ -62,15 +62,18 @@ async function cmdRender(o) {
   const pngs = Array.from({ length: build.n }, (_, k) => path.join(outDir, `slide-${pad2(k + 1)}.png`)).filter(exists);
   const sheet = pngs.length ? await contactSheet(pngs, path.join(outDir, preview ? 'preview-sheet.png' : 'contact-sheet.png'), { W: build.canvas.W, H: build.canvas.H }) : null;
   const stripFile = build.cont && pngs.length > 1 ? await strip(pngs, path.join(outDir, 'continuity-strip.png'), { W: build.canvas.W, H: build.canvas.H }) : null;
-  const deliver = { slides: pngs, sheet, strip: stripFile, zips: [], sources: null, sourcePackage: null };
+  const deliver = { slides: pngs, sheet, strip: stripFile, zips: [], sourcePackage: null };
+  let internalSources = null;
   if (!preview) {
-    deliver.sources = writeSources(spec, outDir);
+    // research sources stay an internal record (out/_internal/sources.md); never zipped or delivered unless the user asks
+    internalSources = writeSources(spec, outDir);
+    const stale = path.join(outDir, 'sources.md'); if (exists(stale)) fs.rmSync(stale);
     const slug = (spec.meta?.slug || spec.meta?.title || 'carousel').toString().toLowerCase().replace(/[^\w؀-ۿ]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'carousel';
     const complete = pngs.length === build.n;
     if (complete && (report.pass || o.force)) {
       const max = build.canvas.maxSlides && build.n > build.canvas.maxSlides ? build.canvas.maxSlides : null;
       const zipName = path.join(outDir, `${slug}-slides.zip`);
-      await zipFiles([...pngs.map((f) => ({ file: f })), ...(deliver.sources ? [{ file: deliver.sources }] : [])], zipName); deliver.zips.push(zipName);
+      await zipFiles(pngs.map((f) => ({ file: f })), zipName); deliver.zips.push(zipName);
       if (max) for (let p = 0; p * max < pngs.length; p++) { const z = path.join(outDir, `${slug}-part${p + 1}.zip`); await zipFiles(pngs.slice(p * max, (p + 1) * max).map((f) => ({ file: f })), z); deliver.zips.push(z); }
       // editable source package (bundled OFL fonts + licenses; user fonts only when marked redistributable)
       const userFontsBlocked = Object.values(build.fonts).filter((f) => f.user && !(spec.brand?.fonts && Object.values(spec.brand.fonts).some((r) => r?.file && r.redistributable)));
@@ -95,7 +98,7 @@ async function cmdRender(o) {
   const full = { ...report, mode: preview ? 'preview' : 'final', rendered: results.map((r) => r.index), archived, warnings: build.warnings, fonts: build.fontReport,
     assets: build.assets.map((a) => ({ ref: a.ref, file: path.basename(a.abs), format: a.format, width: a.width, height: a.height, transparentEdges: a.transparentEdges })),
     canvas: { ...build.canvas, unit: build.u }, style: { id: build.theme.style.id, traits: build.theme.traits, tokens: build.theme.tokens },
-    deliverables: deliver, seconds: +((Date.now() - t0) / 1000).toFixed(1) };
+    deliverables: deliver, internal: { sources: internalSources }, seconds: +((Date.now() - t0) / 1000).toFixed(1) };
   writeJSON(path.join(outDir, 'qc-report.json'), full);
   writeQcMarkdown(report, build, path.join(outDir, 'qc-report.md'));
   log(`\n${report.pass ? '✅' : '❌'} ${preview ? 'معاينة' : 'تصدير'}: ${results.length} شريحة ${build.canvas.W}×${build.canvas.H} — أخطاء ${report.counts.error}، تنبيهات ${report.counts.warn} (${full.seconds} ث)`);
@@ -104,6 +107,7 @@ async function cmdRender(o) {
   log(`📁 ${outDir}`);
   if (deliver.zips.length) log(`📦 ${deliver.zips.map((z) => path.basename(z)).join('، ')}`);
   if (deliver.zipNote) log(`ℹ️  ${deliver.zipNote}`);
+  if (internalSources) log(`🔒 سجل المصادر داخلي (لا يُرفق مع الصور، ويُصدَّر فقط إذا طلبه المستخدم بأمر sources): ${internalSources}`);
   if (!report.pass) process.exitCode = 1;
 }
 function* walkSync(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) yield* walkSync(p); else yield p; } }
@@ -204,6 +208,7 @@ const HELP = `سياق كاروسيل — أداة الرسم
         [--slides 3]      إعادة رسم شريحة/شرائح محددة فقط (مع حفظ النسخة السابقة)
         [--preview]       معاينة فقط (بدون ZIP) في DIR/preview
         [--force]         التصدير رغم الأخطاء (للتشخيص فقط)
+  node scripts/siyaq.mjs sources DIR [--to FILE]          تصدير سجل المصادر الداخلي (فقط إذا طلبه المستخدم)
   node scripts/siyaq.mjs validate carousel.json          فحص الملف والأصول والخطوط بدون رسم
   node scripts/siyaq.mjs verify DIR                      إعادة رسم المصدر القابل للتعديل ومقارنته بالصور
   node scripts/siyaq.mjs analyze-ref image.jpg           تحليل صورة مرجعية (ألوان، سطوع، كثافة)
@@ -215,7 +220,19 @@ const HELP = `سياق كاروسيل — أداة الرسم
 
 const o = args(process.argv.slice(2));
 const cmd = o._[0];
-const map = { render: cmdRender, validate: cmdValidate, verify: cmdVerify, list: cmdList, 'save-style': cmdSaveStyle, 'font-check': cmdFontCheck, doctor: cmdDoctor, 'analyze-ref': cmdAnalyzeRef, init: cmdInit, welcome: () => log(WELCOME) };
+
+// Export the internal research record only when the user explicitly asks for the sources.
+async function cmdSources(o) {
+  const outDir = path.resolve(o._[1] || '');
+  const src = path.join(outDir, INTERNAL_DIR, 'sources.md');
+  if (!o._[1] || !exists(src)) throw new SiyaqError('SOURCES_NOT_FOUND', 'لا يوجد سجل مصادر في هذا المجلد (الكاروسيل لم يعتمد على بحث، أو المسار غير صحيح).');
+  const dst = path.resolve(o.to || path.join(outDir, 'sources.md'));
+  fs.mkdirSync(path.dirname(dst), { recursive: true });
+  fs.copyFileSync(src, dst);
+  log(`✅ صدّرت المصادر بطلب المستخدم: ${dst}`);
+}
+
+const map = { sources: cmdSources, render: cmdRender, validate: cmdValidate, verify: cmdVerify, list: cmdList, 'save-style': cmdSaveStyle, 'font-check': cmdFontCheck, doctor: cmdDoctor, 'analyze-ref': cmdAnalyzeRef, init: cmdInit, welcome: () => log(WELCOME) };
 if (!cmd || !map[cmd]) { log(HELP); process.exit(cmd ? 1 : 0); }
 try { await map[cmd](o); } catch (e) {
   if (e instanceof SiyaqError) { console.error(`❌ [${e.code}] ${e.message}`); process.exitCode = 2; }

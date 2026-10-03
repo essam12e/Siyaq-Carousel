@@ -1,10 +1,10 @@
 {
   "meta": {
-    "date": "2026-10-03T10:13:00.353Z",
+    "date": "2026-10-03T10:56:49.221Z",
     "node": "v22.22.0",
     "platform": "linux-x64",
-    "passed": 14,
-    "total": 14
+    "passed": 15,
+    "total": 15
   },
   "results": [
     {
@@ -30,7 +30,7 @@
       "id": "A",
       "title": "كاروسيل عربي ٥ شرائح بدون هوية",
       "pass": true,
-      "seconds": 5,
+      "seconds": 5.1,
       "checks": [
         {
           "ok": true,
@@ -59,8 +59,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«رتّب يومك قبل لا يرتّبك» 5 كلمات، 189px"
         },
         {
           "ok": true,
@@ -138,8 +153,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«قهوتك تستاهل تحميص طازج» 4 كلمات، 145px"
         },
         {
           "ok": true,
@@ -222,8 +252,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«قبل ما تفاوض، جهّز هذي الأسئلة» 6 كلمات، 138px"
         },
         {
           "ok": true,
@@ -277,7 +322,7 @@
       "id": "D",
       "title": "صورة منتج حقيقية مع الحفاظ على شكلها",
       "pass": true,
-      "seconds": 3.3,
+      "seconds": 3.4,
       "checks": [
         {
           "ok": true,
@@ -306,8 +351,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«إسبريسو دبل من حبوب انحمصت هالأسبوع» 6 كلمات، 101px"
         },
         {
           "ok": true,
@@ -356,7 +416,7 @@
       "id": "E",
       "title": "وصف ستايل مخصص (محفوظ وقابل لإعادة الاستخدام)",
       "pass": true,
-      "seconds": 4.8,
+      "seconds": 4.7,
       "checks": [
         {
           "ok": true,
@@ -390,8 +450,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«ضيفك يحس بالكرم قبل ما تقدّم القهوة» 7 كلمات، 147px"
         },
         {
           "ok": true,
@@ -430,7 +505,7 @@
       "id": "F",
       "title": "تصميم موجّه بصورة مرجعية",
       "pass": true,
-      "seconds": 2.1,
+      "seconds": 2,
       "checks": [
         {
           "ok": true,
@@ -469,8 +544,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«قبل ما تركّب ألواح شمسية» 5 كلمات، 163px"
         },
         {
           "ok": true,
@@ -499,7 +589,7 @@
       "id": "G",
       "title": "عنصر بصري متصل عبر الشرائح",
       "pass": true,
-      "seconds": 4.8,
+      "seconds": 4.7,
       "checks": [
         {
           "ok": true,
@@ -528,8 +618,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«من الفكرة إلى أول طلب» 5 كلمات، 156px"
         },
         {
           "ok": true,
@@ -588,8 +693,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 4 صورة",
-          "detail": "zip=4"
+          "label": "ZIP الشرائح يحتوي 4 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«صباحك يبدأ من الليلة اللي قبله» 6 كلمات، 144px"
         },
         {
           "ok": true,
@@ -626,9 +746,9 @@
     },
     {
       "id": "H",
-      "title": "موضوع مبني على بحث مع ملف مصادر حقيقي",
+      "title": "موضوع مبني على بحث: المصادر سجل داخلي لا يُسلَّم تلقائيًا",
       "pass": true,
-      "seconds": 1.6,
+      "seconds": 3.2,
       "checks": [
         {
           "ok": true,
@@ -657,8 +777,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«كم دقيقة حركة تحتاج بالأسبوع؟» 5 كلمات، 163px"
         },
         {
           "ok": true,
@@ -682,7 +817,12 @@
         },
         {
           "ok": true,
-          "label": "sources.md موجود",
+          "label": "مثال عربي من ٥ شرائح",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "المصادر محفوظة داخليًا في _internal/sources.md",
           "detail": ""
         },
         {
@@ -712,7 +852,51 @@
         },
         {
           "ok": true,
-          "label": "sources.md مضمّن في ZIP",
+          "label": "sources.md غير موجود في ZIP الشرائح",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "sources.md ليس ضمن قائمة الملفات المسلّمة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل بدون سجل المصادر",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "نسخة carousel.json في حزمة المصدر بدون بيانات البحث الداخلية",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "أمر sources يصدّر المصادر عند طلب المستخدم فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملفات الدفعات (part1–3) صور فقط بدون sources.md",
+          "detail": "who-activity-slides.zip:5 who-activity-part1.zip:2 who-activity-part2.zip:2 who-activity-part3.zip:1"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "N",
+      "title": "خطّاف الغلاف: رفض العناوين العامة",
+      "pass": true,
+      "seconds": 2.5,
+      "checks": [
+        {
+          "ok": true,
+          "label": "غلاف يبدأ بـ«مقدمة عن…» يُرفض (HOOK_GENERIC)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يُنشأ ZIP لكاروسيل بخطّاف ضعيف",
           "detail": ""
         }
       ],
@@ -722,7 +906,7 @@
       "id": "I",
       "title": "أبعاد مخصصة",
       "pass": true,
-      "seconds": 1.8,
+      "seconds": 1.7,
       "checks": [
         {
           "ok": true,
@@ -751,8 +935,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«عرضك التقديمي في ٥ قواعد» 5 كلمات، 162px"
         },
         {
           "ok": true,
@@ -791,7 +990,7 @@
       "id": "J",
       "title": "أكثر من ٥ شرائح (١٢ شريحة)",
       "pass": true,
-      "seconds": 2.8,
+      "seconds": 2.6,
       "checks": [
         {
           "ok": true,
@@ -820,8 +1019,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 12 صورة",
-          "detail": "zip=12"
+          "label": "ZIP الشرائح يحتوي 12 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png,slide-06.png,slide-07.png,slide-08.png,slide-09.png,slide-10.png,slide-11.png,slide-12.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«١٠ نصائح للمذاكرة تفرق معك» 5 كلمات، 165px"
         },
         {
           "ok": true,
@@ -860,7 +1074,7 @@
       "id": "K",
       "title": "مسار المعاينة عند الطلب",
       "pass": true,
-      "seconds": 4,
+      "seconds": 3.8,
       "checks": [
         {
           "ok": true,
@@ -904,8 +1118,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«كيف تختار عطر المساء؟» 4 كلمات، 163px"
         },
         {
           "ok": true,
@@ -934,7 +1163,7 @@
       "id": "L",
       "title": "التسليم المباشر الافتراضي",
       "pass": true,
-      "seconds": 2.6,
+      "seconds": 2.5,
       "checks": [
         {
           "ok": true,
@@ -963,8 +1192,23 @@
         },
         {
           "ok": true,
-          "label": "ZIP يحتوي 5 صورة",
-          "detail": "zip=5"
+          "label": "ZIP الشرائح يحتوي 5 صورة PNG فقط (بدون sources.md أو غيره)",
+          "detail": "slide-01.png,slide-02.png,slide-03.png,slide-04.png,slide-05.png"
+        },
+        {
+          "ok": true,
+          "label": "كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد sources.md ضمن ملفات التسليم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة الأولى تبدأ بخطّاف قصير وبارز",
+          "detail": "«اكتب طلبك بوضوح وخذ نتيجة أفضل» 6 كلمات، 155px"
         },
         {
           "ok": true,
@@ -998,7 +1242,7 @@
       "id": "M",
       "title": "تعديل شريحة واحدة مع حفظ النسخ السابقة",
       "pass": true,
-      "seconds": 4,
+      "seconds": 4.3,
       "checks": [
         {
           "ok": true,
@@ -1023,7 +1267,7 @@
         {
           "ok": true,
           "label": "النسخة السابقة محفوظة (PNG + HTML)",
-          "detail": "v1-2026-10-03T10-12-59.html, v1-2026-10-03T10-12-59.png"
+          "detail": "v1-2026-10-03T10-56-47.html, v1-2026-10-03T10-56-47.png"
         },
         {
           "ok": true,

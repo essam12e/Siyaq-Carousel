@@ -39,6 +39,7 @@ export async function runQC(build, results, { allRendered }) {
   const userFonts = Object.values(build.fonts).filter((f) => f.user);
   const famOf = Object.fromEntries(Object.values(build.fonts).map((f) => [f.cssFamily, f]));
   const slides = [];
+  let slidesHook = null;
   for (const r of results) {
     const issues = [];
     const add = (level, code, msg, extra) => issues.push({ level, code, msg, ...(extra || {}) });
@@ -57,6 +58,25 @@ export async function runQC(build, results, { allRendered }) {
     if (m.fit?.fitted && m.fit.k < 1) add('info', 'TEXT_SCALED', `صُغّر حجم الخط إلى ${Math.round(m.fit.k * 100)}% ليتسع النص (ضمن الحد المقروء).`, { k: m.fit.k });
     // fonts loaded
     for (const f of m.fonts) if (f.status === 'error') add('error', 'FONT_LOAD_FAILED', `فشل تحميل الخط ${f.family} (${f.weight})`);
+    // slide 1 must open with a hook: a short, specific headline that dominates the slide
+    if (r.index === 1) {
+      const cands = m.tx.filter((t) => /^slides\[0\]\.(title|text|name|quote)$/.test(t.f || '') && t.text.trim());
+      const hook = cands.sort((a, b) => b.fontSize - a.fontSize)[0];
+      if (!hook) add('error', 'HOOK_MISSING', 'الشريحة الأولى بدون عنوان خطّاف؛ أضف title (غلاف) أو text (عبارة) يشد القارئ.');
+      else {
+        const txt = hook.text.replace(/\s+/g, ' ').trim();
+        const words = txt.split(' ').filter(Boolean).length;
+        const topic = String(build.spec?.meta?.topic || '').trim();
+        if (/^(مقدمة|المقدمة|تمهيد|نبذة|تعريف|مدخل|introduction|intro|overview)\b/i.test(txt) || /^(مقدمة|نبذة|تعريف|مدخل)\s+(عن|إلى|حول)/.test(txt) || (topic && txt.replace(/[.؟?!،]/g, '') === topic.replace(/[.؟?!،]/g, '')))
+          add('error', 'HOOK_GENERIC', `عنوان الغلاف عام ولا يشد: «${txt.slice(0, 50)}». اكتب خطّافًا (مشكلة محددة، سؤال، فائدة، أو معلومة مفاجئة) بدل «مقدمة» أو تكرار اسم الموضوع.`);
+        if (words > 12) add('warn', 'HOOK_TOO_LONG', `الخطّاف ${words} كلمة؛ الأفضل 3–10 كلمات ليُقرأ في لمحة.`);
+        const others = m.tx.filter((t) => t !== hook && t.inStage !== false && !/^(counter|swipe|handle|brand)/.test(t.f || ''));
+        const maxOther = Math.max(0, ...others.map((t) => t.fontSize));
+        const minSize = 64 * u;
+        if (hook.fontSize < minSize || hook.fontSize < maxOther * 1.25) add('error', 'HOOK_NOT_DOMINANT', `الخطّاف ليس العنصر الأبرز في الغلاف (حجمه ${Math.round(hook.fontSize)}px، وأكبر نص آخر ${Math.round(maxOther)}px).`);
+        slidesHook = { text: txt, words, fontSize: Math.round(hook.fontSize), field: hook.f };
+      }
+    }
     let img = null;
     try { img = await raw(r.png); } catch { /* reported above */ }
     for (const t of m.tx) {
@@ -136,5 +156,5 @@ export async function runQC(build, results, { allRendered }) {
   if (allRendered && results.length !== build.n) global.push({ level: 'error', code: 'SLIDE_COUNT', msg: `عدد الصور ${results.length} لا يطابق عدد الشرائح ${build.n}` });
   for (const s of seams) if (!s.ok) global.push({ level: 'warn', code: 'SEAM_MISMATCH', msg: `حافة الاستمرارية بين الشريحتين ${s.between.join(' و')} غير متطابقة (فرق ${s.meanDiff})` });
   const all = [...global, ...slides.flatMap((s) => s.issues.map((i) => ({ ...i, slide: s.index })))];
-  return { pass: !all.some((i) => i.level === 'error'), counts: { error: all.filter((i) => i.level === 'error').length, warn: all.filter((i) => i.level === 'warn').length }, global, seams, slides };
+  return { hook: slidesHook, pass: !all.some((i) => i.level === 'error'), counts: { error: all.filter((i) => i.level === 'error').length, warn: all.filter((i) => i.level === 'warn').length }, global, seams, slides };
 }

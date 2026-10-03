@@ -1,6 +1,6 @@
 ---
 name: siyaq-carousel
-description: "سياق كاروسيل (Siyaq Carousel): designs and exports finished Arabic social-media carousels as real PNG slides + ZIP, with research and sources.md when facts are needed. Use when the user says «سياق كاروسيل», «استخدم سياق كاروسيل», «صمم باستخدام سياق كاروسيل», or asks for an Instagram/TikTok/LinkedIn/Story carousel, كاروسيل, شرائح منشور, or multi-slide social post design (Arabic or English)."
+description: "سياق كاروسيل (Siyaq Carousel): designs and exports finished Arabic social-media carousels as real PNG slides + ZIP, opening with a strong hook and researching/fact-checking when facts are needed. Use when the user says «سياق كاروسيل», «استخدم سياق كاروسيل», «صمم باستخدام سياق كاروسيل», or asks for an Instagram/TikTok/LinkedIn/Story carousel, كاروسيل, شرائح منشور, or multi-slide social post design (Arabic or English)."
 ---
 
 # سياق كاروسيل | Siyaq Carousel
@@ -66,8 +66,15 @@ spec (or reference them by relative path). Validate fonts before use:
 
 Read `references/research.md`. In short: use the runtime's search/browse tools; prefer primary/official sources;
 verify dates; never invent stats, quotes, studies, prices, certifications, medical claims, or benefits.
-Put sources in `spec.sources` (title, url, accessed YYYY-MM-DD, supports, slides, uncertainty) → the CLI writes Arabic
-`sources.md`. Keep user-provided facts in `spec.userProvidedFacts` (kept separate). No URLs inside slides by default.
+Put sources in `spec.sources` (title, url, accessed YYYY-MM-DD, supports, slides, uncertainty) → the CLI writes an Arabic
+**internal** record `out/_internal/sources.md`. Keep user-provided facts in `spec.userProvidedFacts` (kept separate).
+No URLs inside slides by default.
+
+**Sources are an internal record, not a deliverable.** Never put sources.md in the slides ZIP (the CLI won't), never
+attach or upload it with the images, and don't paste the source list into your delivery message. Deliver sources only
+when the user explicitly asks («أبي المصادر», «وش مصادرك؟») — then run `node scripts/siyaq.mjs sources work/out`
+(writes `work/out/sources.md`, or `--to FILE`) and send that file. You may say in one line that the facts were checked
+against official sources and that you can share them on request.
 If browsing is unavailable: say so, use only the user's material, or ask for sources when facts are essential.
 
 ## 5. Write content and art direction
@@ -77,6 +84,28 @@ Read `references/spec.md` (schema + layouts) and `references/design-rules.md` (A
   story → continuity `scene`/`ribbon`; product → `product`/`cover` with the real photo; numbers → `stat`;
   lists → `list` (grid/check/stack); explanations → `diagram`/`timeline`. Vary compositions across slides.
 - A typical 5: hook cover → problem/insight → core value (steps/list/stat/compare) → proof or example → CTA.
+
+### The hook (slide 1 — mandatory)
+
+Slide 1's main headline (`cover.title`, or `statement.text` if slide 1 is a statement) is a **hook**, not a label.
+1. Privately write **three** hook candidates tailored to the topic, audience and goal, then pick the strongest.
+   Record them in `meta.hook = {"candidates": [3 strings], "chosen": index, "why": "…"}` (internal; stripped from the
+   editable source package). Do **not** show the candidates or ask the user to choose — unless they asked for a preview,
+   in which case the cover preview may present them.
+2. Patterns that work:
+   - Product: a relevant benefit, desire, or pain point of the buyer («قهوتك تستاهل تحميص طازج», «ظهرك يتعب من كرسي المكتب؟»).
+   - Educational: a specific problem, an intriguing question, or a useful insight
+     («كم دقيقة حركة تحتاج بالأسبوع؟», «رتّب يومك قبل لا يرتّبك»).
+3. Short and clear: aim for 3–8 words (max ~10). One idea. Readable in a glance. Use `**…**` on the key words.
+4. Forbidden: generic openers («مقدمة عن…», «تعريف…», «نبذة», «Introduction»), just repeating the topic name,
+   and anything invented — benefits, numbers, discounts, urgency («لفترة محدودة»), or guaranteed results («مضمون»).
+   A number in the hook must come from the user or a verified source.
+5. Slides 2–5 must deliver what the hook promises (a question gets answered, a promised method gets shown).
+6. If the user gave an exact headline, keep it verbatim (`"exact": true`) and don't rewrite it.
+7. Set `meta.topic` to the plain topic name; QC fails a cover headline that just repeats it.
+QC checks slide 1: `HOOK_MISSING`, `HOOK_GENERIC` (generic opener / topic repeat), `HOOK_NOT_DOMINANT` (must be the
+largest text, ≥64px at 1080), `HOOK_TOO_LONG` (warning above 12 words). Whether it is *compelling* is your judgment:
+look at the rendered cover and rewrite if it is bland.
 - Copy: short Arabic lines; one idea per slide; ≤ ~18 words body per slide; titles ≤ ~8 words.
   Emphasis with `**كلمة**` (accent colour) or `==كلمة==` (highlight). Shorten without changing meaning.
 - Exact user copy: set `"exact": true` on that slide (or the spec). If it can't fit, the CLI reports
@@ -96,9 +125,10 @@ Read `references/spec.md` (schema + layouts) and `references/design-rules.md` (A
 node SKILL_DIR/scripts/siyaq.mjs render work/carousel.json --out work/out
 ```
 
-Outputs in `work/out/`: `slide-01.png…`, `<slug>-slides.zip` (PNGs + sources.md), `<slug>-source.zip`
-(editable HTML/CSS + fonts + licences), `source/` (same, unzipped), `contact-sheet.png`, `continuity-strip.png`
-(if continuity), `sources.md` (if sources), `qc-report.md/json`.
+Outputs in `work/out/`: `slide-01.png…`, `<slug>-slides.zip` (**PNG images only**; plus `-partN.zip` batches, also
+images only), `<slug>-source.zip` (editable HTML/CSS + fonts + licences), `source/` (same, unzipped),
+`contact-sheet.png`, `continuity-strip.png` (if continuity), `qc-report.md/json`.
+Internal, never delivered automatically: `_internal/sources.md` (research record) and `_internal/carousel.json`.
 Exit codes: 0 ok · 1 QC errors (no ZIP produced) · 2 blocked input (bad font/size/asset — message explains) · 3 crash.
 
 ## 7. Inspect, fix, re-render (mandatory before delivery)
@@ -115,14 +145,15 @@ Exit codes: 0 ok · 1 QC errors (no ZIP produced) · 2 blocked input (bad font/s
 ## 8. Deliver
 
 Give the user real files through the environment's file mechanism (attach/upload/save to their folder):
-the PNGs, the slides ZIP, the source ZIP, and `sources.md` when research was done. Then a short Arabic summary:
+the PNGs, the slides ZIP, and the source ZIP. Nothing from `_internal/` — sources only on explicit request (§4). Then a short Arabic summary:
 what was made (count, size, style), any assumptions you made, QC result, and honest limitations
 (e.g. low-resolution product photo upscaled, platform limit batching). A localhost URL or HTML preview is never the
 final deliverable.
 
 ## 9. Preview workflow (only when requested)
 
-Honour the requested scope: content only → send the outline/copy as text; cover → `render --preview --slides 1`;
+Honour the requested scope: content only → send the outline/copy as text; cover → `render --preview --slides 1`
+(here you may show the three hook candidates and let the user pick);
 direction → `--preview --slides 1,2`; full → `--preview`. Previews go to `out/preview/` with no ZIP.
 After approval, run the normal render and deliver.
 

@@ -53,8 +53,11 @@ async function renderAndCheck(ok, name, specRel, extra = []) {
   ok(dimsOk, `كل الصور بالأبعاد ${W}×${H} بالضبط`);
   const zips = rep.deliverables.zips || [];
   ok(zips.length >= 1 && zips.every((z) => fs.existsSync(z)), 'ملف ZIP للشرائح موجود');
-  const inZip = zips.flatMap(zipNames).filter((x) => x.endsWith('.png'));
-  ok(inZip.length === n, `ZIP يحتوي ${n} صورة`, `zip=${inZip.length}`);
+  const mainZip = zips[0] ? zipNames(zips[0]) : [];
+  ok(mainZip.length === n && mainZip.every((x) => /^slide-\d+\.png$/.test(x)), `ZIP الشرائح يحتوي ${n} صورة PNG فقط (بدون sources.md أو غيره)`, mainZip.join(','));
+  ok(zips.flatMap(zipNames).every((x) => x.endsWith('.png')), 'كل ملفات ZIP للتحميل (ومنها الدفعات) صور فقط');
+  ok(!fs.existsSync(path.join(out, 'sources.md')), 'لا يوجد sources.md ضمن ملفات التسليم');
+  ok(rep.hook && rep.hook.text && rep.hook.words <= 12 && !rep.slides[0].issues.some((i) => /^HOOK_/.test(i.code)), 'الشريحة الأولى تبدأ بخطّاف قصير وبارز', rep.hook ? `«${rep.hook.text}» ${rep.hook.words} كلمات، ${rep.hook.fontSize}px` : 'لا يوجد');
   ok(rep.deliverables.sourcePackage && fs.existsSync(rep.deliverables.sourcePackage), 'حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة');
   const htmls = fs.readdirSync(path.join(out, 'source')).filter((f) => /^slide-\d+\.html$/.test(f));
   ok(htmls.length === n, 'ملف HTML قابل للتعديل لكل شريحة');
@@ -162,10 +165,11 @@ await test('G', 'عنصر بصري متصل عبر الشرائح', async (ok) =
   }
 });
 
-await test('H', 'موضوع مبني على بحث مع ملف مصادر حقيقي', async (ok) => {
+await test('H', 'موضوع مبني على بحث: المصادر سجل داخلي لا يُسلَّم تلقائيًا', async (ok) => {
   const { out, spec, rep } = await renderAndCheck(ok, 'H-research', 'H-research/carousel.json');
-  const f = path.join(out, 'sources.md');
-  ok(fs.existsSync(f), 'sources.md موجود');
+  ok(rep.slides.length === 5, 'مثال عربي من ٥ شرائح');
+  const f = path.join(out, '_internal', 'sources.md');
+  ok(fs.existsSync(f) && rep.internal?.sources === f, 'المصادر محفوظة داخليًا في _internal/sources.md');
   const md = fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '';
   ok(spec.sources.every((s) => md.includes(s.url) && md.includes(s.title)), 'كل مصدر بعنوانه ورابطه');
   ok(/تاريخ الوصول|accessed/i.test(md) && /2026-10-03/.test(md), 'تاريخ الوصول مذكور');
@@ -173,8 +177,35 @@ await test('H', 'موضوع مبني على بحث مع ملف مصادر حقي
   ok(/درجة اليقين|عدم اليقين|ملاحظات/.test(md), 'توضيح حدود اليقين');
   const visible = rep.slides.flatMap((s) => s.text.map((t) => t.text)).join('\n');
   ok(!/https?:\/\/|who\.int/.test(visible), 'الروابط غير مطبوعة في الصور (النص المرئي المُقاس)');
-  const zips = readJ(path.join(out, 'qc-report.json')).deliverables.zips;
-  ok(zips.flatMap(zipNames).includes('sources.md'), 'sources.md مضمّن في ZIP');
+  const zips = rep.deliverables.zips;
+  ok(!zips.flatMap(zipNames).includes('sources.md'), 'sources.md غير موجود في ZIP الشرائح');
+  ok(!Object.values(rep.deliverables).flat().some((x) => typeof x === 'string' && /sources\.md$/.test(x)), 'sources.md ليس ضمن قائمة الملفات المسلّمة');
+  const srcZip = zipNames(rep.deliverables.sourcePackage);
+  ok(!srcZip.some((x) => /sources\.md$|_internal/.test(x)), 'حزمة المصدر القابلة للتعديل بدون سجل المصادر');
+  const pubSpec = readJ(path.join(out, 'source', 'carousel.json'));
+  ok(!pubSpec.sources && !pubSpec.research && !pubSpec.meta?.hook, 'نسخة carousel.json في حزمة المصدر بدون بيانات البحث الداخلية');
+  // export on explicit request only
+  const ex = run('sources', out, '--to', path.join(OUT, 'H-sources-on-request.md'));
+  ok(ex.code === 0 && fs.readFileSync(path.join(OUT, 'H-sources-on-request.md'), 'utf8') === md, 'أمر sources يصدّر المصادر عند طلب المستخدم فقط');
+  // batched ZIPs (platform limit) carry images only
+  const bdir = path.join(OUT, 'H-batched'); fs.mkdirSync(bdir, { recursive: true });
+  const bspec = { ...spec, canvas: { width: 1080, height: 1350, maxSlides: 2 } };
+  fs.writeFileSync(path.join(bdir, 'carousel.json'), JSON.stringify(bspec));
+  const br = run('render', path.join(bdir, 'carousel.json'), '--out', path.join(bdir, 'out'));
+  const brep = readJ(path.join(bdir, 'out', 'qc-report.json'));
+  const parts = brep.deliverables.zips.filter((z) => /-part\d+\.zip$/.test(z));
+  ok(br.code === 0 && parts.length === 3 && brep.deliverables.zips.flatMap(zipNames).every((x) => /^slide-\d+\.png$/.test(x)), 'ملفات الدفعات (part1–3) صور فقط بدون sources.md', brep.deliverables.zips.map((z) => path.basename(z) + ':' + zipNames(z).length).join(' '));
+});
+
+await test('N', 'خطّاف الغلاف: رفض العناوين العامة', async (ok) => {
+  const dir = path.join(OUT, 'N-weak-hook'); fs.mkdirSync(dir, { recursive: true });
+  const j = readJ(path.join(ROOT, 'examples', 'basic-ar', 'carousel.json'));
+  j.slides[0].title = 'مقدمة عن تنظيم الوقت';
+  fs.writeFileSync(path.join(dir, 'carousel.json'), JSON.stringify(j));
+  const r = run('render', path.join(dir, 'carousel.json'), '--out', path.join(dir, 'out'));
+  const rep = readJ(path.join(dir, 'out', 'qc-report.json'));
+  ok(r.code === 1 && rep.slides[0].issues.some((i) => i.code === 'HOOK_GENERIC'), 'غلاف يبدأ بـ«مقدمة عن…» يُرفض (HOOK_GENERIC)');
+  ok(!rep.deliverables.zips.length, 'لا يُنشأ ZIP لكاروسيل بخطّاف ضعيف');
 });
 
 await test('I', 'أبعاد مخصصة', async (ok) => {
