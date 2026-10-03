@@ -1,0 +1,68 @@
+{
+ "meta": {
+  "title": "خطك الخاص"
+ },
+ "canvas": {
+  "platform": "instagram-square"
+ },
+ "style": {
+  "preset": "minimal",
+  "palette": "sand"
+ },
+ "brand": {
+  "fonts": {
+   "heading": {
+    "file": "../../fixtures/Mada-user-upload.ttf",
+    "weight": "200 900"
+   },
+   "body": {
+    "file": "../../fixtures/Mada-user-upload.ttf",
+    "weight": "200 900"
+   }
+  }
+ },
+ "slides": [
+  {
+   "layout": "cover",
+   "kicker": "مهارات العمل",
+   "title": "قبل ما تفاوض، **جهّز** هذي الأسئلة",
+   "subtitle": "ثلاث دقائق تحضير توفر عليك تنازلات كثيرة."
+  },
+  {
+   "layout": "list",
+   "variant": "stack",
+   "title": "اسأل نفسك",
+   "items": [
+    {
+     "title": "وش أقل شي أقبل فيه؟",
+     "text": "حدّه قبل الجلسة مو خلالها."
+    },
+    {
+     "title": "وش يهم الطرف الثاني؟",
+     "text": "افهم دوافعه قبل عرضه."
+    },
+    {
+     "title": "وش البديل لو ما اتفقنا؟",
+     "text": "البديل الواضح يعطيك هدوء."
+    }
+   ]
+  },
+  {
+   "layout": "statement",
+   "text": "اللي يعرف بديله، ==يفاوض بثقة==.",
+   "support": "والثقة تبان في نبرة صوتك قبل كلامك."
+  },
+  {
+   "layout": "quote",
+   "quote": "لا تفاوض على رقم قبل ما تفهم القيمة اللي وراه.",
+   "author": "قاعدة عملية",
+   "role": "من تجارب فرق المبيعات"
+  },
+  {
+   "layout": "cta",
+   "title": "احفظها لاجتماعك الجاي",
+   "text": "وشاركها مع زميل عنده تفاوض قريب.",
+   "action": "احفظ المنشور"
+  }
+ ]
+}

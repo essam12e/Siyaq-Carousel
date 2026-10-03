@@ -1,0 +1,96 @@
+{
+ "meta": {
+  "title": "اكتب طلبك للذكاء الاصطناعي بوضوح",
+  "slug": "prompt-tips",
+  "brief": "صمم باستخدام سياق كاروسيل ستوري تقني عن كتابة طلب واضح للذكاء الاصطناعي، حساباتي انستقرام وسناب وإكس nitaaq.test وإيميلي hello@example.com"
+ },
+ "canvas": {
+  "platform": "stories"
+ },
+ "style": {
+  "preset": "tech",
+  "palette": "midnight"
+ },
+ "brand": {
+  "handles": [
+   {
+    "platform": "instagram",
+    "handle": "nitaaq.test"
+   },
+   {
+    "platform": "snapchat",
+    "handle": "nitaaq.test"
+   },
+   {
+    "platform": "x",
+    "handle": "nitaaq.test"
+   }
+  ],
+  "contact": {
+   "email": "hello@example.com"
+  }
+ },
+ "slides": [
+  {
+   "layout": "cover",
+   "kicker": "prompt 101",
+   "title": "اكتب طلبك **بوضوح** وخذ نتيجة أفضل",
+   "subtitle": "خمس عناصر تفرق في جودة الرد."
+  },
+  {
+   "layout": "list",
+   "variant": "stack",
+   "title": "العناصر الخمسة",
+   "items": [
+    {
+     "title": "الدور",
+     "text": "مثل: أنت محرر محتوى."
+    },
+    {
+     "title": "المهمة",
+     "text": "وش تبي بالضبط."
+    },
+    {
+     "title": "السياق",
+     "text": "لمن ولماذا."
+    },
+    {
+     "title": "الشكل",
+     "text": "قائمة، جدول، فقرة."
+    },
+    {
+     "title": "الحدود",
+     "text": "الطول واللغة والنبرة."
+    }
+   ]
+  },
+  {
+   "layout": "comparison",
+   "variant": "stacked",
+   "title": "قبل وبعد",
+   "a": {
+    "label": "طلب مبهم",
+    "points": [
+     "اكتب لي عن القهوة"
+    ]
+   },
+   "b": {
+    "label": "طلب واضح",
+    "points": [
+     "اكتب ٣ أفكار منشورات عن القهوة المختصة لجمهور سعودي، بنبرة ودية، كل فكرة سطرين"
+    ]
+   },
+   "vsLabel": "مقابل"
+  },
+  {
+   "layout": "statement",
+   "text": "إذا الرد ما عجبك، **عدّل الطلب** مو النموذج.",
+   "support": "أضف مثال واحد للنتيجة اللي تبيها."
+  },
+  {
+   "layout": "cta",
+   "title": "تابعنا لنصايح أكثر",
+   "action": "تابعنا"
+  }
+ ]
+}

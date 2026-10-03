@@ -1,0 +1,613 @@
+{
+ "version": 1,
+ "fonts": [
+  {
+   "id": "alexandria",
+   "family": "Alexandria",
+   "category": "sans",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Alexandria — هندسي عريض وقوي للعناوين",
+   "license": "OFL-1.1",
+   "licenseFile": "alexandria/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "alexandria/Alexandria[wght].ttf",
+     "weight": "100 900",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "almarai",
+   "family": "Almarai",
+   "category": "sans",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Almarai — ودود وواضح جدًا للقراءة على الجوال",
+   "license": "OFL-1.1",
+   "licenseFile": "almarai/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "almarai/Almarai-Bold.ttf",
+     "weight": "700",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "almarai/Almarai-ExtraBold.ttf",
+     "weight": "800",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "almarai/Almarai-Regular.ttf",
+     "weight": "400",
+     "style": "normal",
+     "variable": false
+    }
+   ]
+  },
+  {
+   "id": "amiri",
+   "family": "Amiri",
+   "category": "naskh",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Amiri — نسخ كلاسيكي فاخر للعناوين التحريرية",
+   "license": "OFL-1.1",
+   "licenseFile": "amiri/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "amiri/Amiri-Bold.ttf",
+     "weight": "700",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "amiri/Amiri-Regular.ttf",
+     "weight": "400",
+     "style": "normal",
+     "variable": false
+    }
+   ]
+  },
+  {
+   "id": "aref-ruqaa",
+   "family": "Aref Ruqaa",
+   "category": "display",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Aref Ruqaa — رقعة للزخرفة والعبارات القصيرة فقط",
+   "license": "OFL-1.1",
+   "licenseFile": "aref-ruqaa/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "aref-ruqaa/ArefRuqaa-Bold.ttf",
+     "weight": "700",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "aref-ruqaa/ArefRuqaa-Regular.ttf",
+     "weight": "400",
+     "style": "normal",
+     "variable": false
+    }
+   ]
+  },
+  {
+   "id": "baloo-bhaijaan-2",
+   "family": "Baloo Bhaijaan 2",
+   "category": "display",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Baloo Bhaijaan 2 — دائري مرح",
+   "license": "OFL-1.1",
+   "licenseFile": "baloo-bhaijaan-2/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "baloo-bhaijaan-2/BalooBhaijaan2[wght].ttf",
+     "weight": "400 800",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "cairo",
+   "family": "Cairo",
+   "category": "sans",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Cairo — كوفي حديث متوازن، ممتاز للعناوين والنصوص",
+   "license": "OFL-1.1",
+   "licenseFile": "cairo/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "cairo/Cairo[slnt,wght].ttf",
+     "weight": "200 1000",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "caveat",
+   "family": "Caveat",
+   "category": "handwritten-latin",
+   "scripts": [
+    "latin"
+   ],
+   "note_ar": "Caveat — لاتيني يدوي مرافق للرسم اليدوي",
+   "license": "OFL-1.1",
+   "licenseFile": "caveat/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "caveat/Caveat[wght].ttf",
+     "weight": "400 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "changa",
+   "family": "Changa",
+   "category": "sans",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Changa — كوفي مضغوط بطابع ريترو/رياضي",
+   "license": "OFL-1.1",
+   "licenseFile": "changa/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "changa/Changa[wght].ttf",
+     "weight": "200 800",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "el-messiri",
+   "family": "El Messiri",
+   "category": "display",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "El Messiri — عناوين أنيقة بلمسة فاخرة",
+   "license": "OFL-1.1",
+   "licenseFile": "el-messiri/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "el-messiri/ElMessiri[wght].ttf",
+     "weight": "400 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "handjet",
+   "family": "Handjet",
+   "category": "display",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Handjet — نقطي/بكسلي للريترو",
+   "license": "OFL-1.1",
+   "licenseFile": "handjet/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "handjet/Handjet[ELGR,ELSH,wght].ttf",
+     "weight": "100 900",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "ibm-plex-sans-arabic",
+   "family": "IBM Plex Sans Arabic",
+   "category": "sans",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "IBM Plex Sans Arabic — مؤسسي واضح للنصوص الطويلة",
+   "license": "OFL-1.1",
+   "licenseFile": "ibm-plex-sans-arabic/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "ibm-plex-sans-arabic/IBMPlexSansArabic-Bold.ttf",
+     "weight": "700",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "ibm-plex-sans-arabic/IBMPlexSansArabic-Medium.ttf",
+     "weight": "500",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "ibm-plex-sans-arabic/IBMPlexSansArabic-Regular.ttf",
+     "weight": "400",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "ibm-plex-sans-arabic/IBMPlexSansArabic-SemiBold.ttf",
+     "weight": "600",
+     "style": "normal",
+     "variable": false
+    }
+   ]
+  },
+  {
+   "id": "jetbrains-mono",
+   "family": "JetBrains Mono",
+   "category": "mono-latin",
+   "scripts": [
+    "latin"
+   ],
+   "note_ar": "JetBrains Mono — لاتيني أحادي المسافة للتسميات التقنية",
+   "license": "OFL-1.1",
+   "licenseFile": "jetbrains-mono/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "jetbrains-mono/JetBrainsMono[wght].ttf",
+     "weight": "100 800",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "kufam",
+   "family": "Kufam",
+   "category": "kufi",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Kufam — كوفي هندسي حاد",
+   "license": "OFL-1.1",
+   "licenseFile": "kufam/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "kufam/Kufam[wght].ttf",
+     "weight": "400 900",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "lalezar",
+   "family": "Lalezar",
+   "category": "display",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Lalezar — عناوين ثقيلة جدًا (وزن واحد)",
+   "license": "OFL-1.1",
+   "licenseFile": "lalezar/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "lalezar/Lalezar-Regular.ttf",
+     "weight": "400",
+     "style": "normal",
+     "variable": false
+    }
+   ]
+  },
+  {
+   "id": "marhey",
+   "family": "Marhey",
+   "category": "display",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Marhey — عناوين مرحة بطابع كوميك",
+   "license": "OFL-1.1",
+   "licenseFile": "marhey/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "marhey/Marhey[wght].ttf",
+     "weight": "300 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "markazi-text",
+   "family": "Markazi Text",
+   "category": "naskh",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Markazi Text — نسخ تحريري للمجلات",
+   "license": "OFL-1.1",
+   "licenseFile": "markazi-text/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "markazi-text/MarkaziText[wght].ttf",
+     "weight": "400 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "noto-kufi-arabic",
+   "family": "Noto Kufi Arabic",
+   "category": "kufi",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Noto Kufi Arabic — كوفي متين",
+   "license": "OFL-1.1",
+   "licenseFile": "noto-kufi-arabic/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "noto-kufi-arabic/NotoKufiArabic[wght].ttf",
+     "weight": "100 900",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "noto-naskh-arabic",
+   "family": "Noto Naskh Arabic",
+   "category": "naskh",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Noto Naskh Arabic — نسخ تقليدي للنصوص التحريرية",
+   "license": "OFL-1.1",
+   "licenseFile": "noto-naskh-arabic/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "noto-naskh-arabic/NotoNaskhArabic[wght].ttf",
+     "weight": "400 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "playfair-display",
+   "family": "Playfair Display",
+   "category": "serif-latin",
+   "scripts": [
+    "latin"
+   ],
+   "note_ar": "Playfair Display — لاتيني فقط، مرافق للأسلوب التحريري",
+   "license": "OFL-1.1",
+   "licenseFile": "playfair-display/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "playfair-display/PlayfairDisplay[wght].ttf",
+     "weight": "400 900",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "playpen-sans-arabic",
+   "family": "Playpen Sans Arabic",
+   "category": "handwritten",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Playpen Sans Arabic — خط يدوي واضح",
+   "license": "OFL-1.1",
+   "licenseFile": "playpen-sans-arabic/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "playpen-sans-arabic/PlaypenSansArabic[wght].ttf",
+     "weight": "100 800",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "rakkas",
+   "family": "Rakkas",
+   "category": "display",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Rakkas — عناوين ريترو مزخرفة (وزن واحد)",
+   "license": "OFL-1.1",
+   "licenseFile": "rakkas/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "rakkas/Rakkas-Regular.ttf",
+     "weight": "400",
+     "style": "normal",
+     "variable": false
+    }
+   ]
+  },
+  {
+   "id": "readex-pro",
+   "family": "Readex Pro",
+   "category": "sans",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Readex Pro — هندسي حديث واضح، مناسب للتقنية والإنفوجرافيك",
+   "license": "OFL-1.1",
+   "licenseFile": "readex-pro/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "readex-pro/ReadexPro[HEXP,wght].ttf",
+     "weight": "160 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "reem-kufi",
+   "family": "Reem Kufi",
+   "category": "kufi",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Reem Kufi — كوفي هندسي",
+   "license": "OFL-1.1",
+   "licenseFile": "reem-kufi/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "reem-kufi/ReemKufi[wght].ttf",
+     "weight": "400 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "reem-kufi-fun",
+   "family": "Reem Kufi Fun",
+   "category": "display",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Reem Kufi Fun — كوفي مرح للقصاصات والمرح",
+   "license": "OFL-1.1",
+   "licenseFile": "reem-kufi-fun/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "reem-kufi-fun/ReemKufiFun[wght].ttf",
+     "weight": "400 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "space-grotesk",
+   "family": "Space Grotesk",
+   "category": "sans-latin",
+   "scripts": [
+    "latin"
+   ],
+   "note_ar": "Space Grotesk — لاتيني فقط، مرافق للتقنية",
+   "license": "OFL-1.1",
+   "licenseFile": "space-grotesk/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "space-grotesk/SpaceGrotesk[wght].ttf",
+     "weight": "300 700",
+     "style": "normal",
+     "variable": true
+    }
+   ]
+  },
+  {
+   "id": "tajawal",
+   "family": "Tajawal",
+   "category": "sans",
+   "scripts": [
+    "arabic",
+    "latin"
+   ],
+   "note_ar": "Tajawal — خفيف وأنيق وقوي بالأوزان الثقيلة",
+   "license": "OFL-1.1",
+   "licenseFile": "tajawal/OFL.txt",
+   "source": "https://github.com/google/fonts",
+   "faces": [
+    {
+     "file": "tajawal/Tajawal-Black.ttf",
+     "weight": "900",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "tajawal/Tajawal-Bold.ttf",
+     "weight": "700",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "tajawal/Tajawal-ExtraBold.ttf",
+     "weight": "800",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "tajawal/Tajawal-Medium.ttf",
+     "weight": "500",
+     "style": "normal",
+     "variable": false
+    },
+    {
+     "file": "tajawal/Tajawal-Regular.ttf",
+     "weight": "400",
+     "style": "normal",
+     "variable": false
+    }
+   ]
+  }
+ ]
+}

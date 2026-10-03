@@ -1,0 +1,24 @@
+{
+ "meta": {
+  "title": "negative"
+ },
+ "canvas": {
+  "platform": "instagram-square"
+ },
+ "style": {
+  "preset": "minimal"
+ },
+ "brand": {
+  "fonts": {
+   "heading": {
+    "file": "../../fixtures/corrupt-font.ttf"
+   }
+  }
+ },
+ "slides": [
+  {
+   "layout": "statement",
+   "text": "نص عربي للاختبار"
+  }
+ ]
+}

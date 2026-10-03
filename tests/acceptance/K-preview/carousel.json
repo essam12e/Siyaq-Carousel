@@ -1,0 +1,55 @@
+{
+ "meta": {
+  "title": "عطر المساء",
+  "slug": "luxury-preview"
+ },
+ "canvas": {
+  "platform": "instagram-portrait"
+ },
+ "style": {
+  "preset": "luxury",
+  "palette": "noir-gold"
+ },
+ "slides": [
+  {
+   "layout": "cover",
+   "kicker": "دليل العطور",
+   "title": "كيف تختار **عطر المساء**؟",
+   "subtitle": "ثلاث قواعد يتبعها خبراء التنسيق."
+  },
+  {
+   "layout": "list",
+   "title": "القواعد",
+   "items": [
+    {
+     "title": "ابدأ بالمكان",
+     "text": "العطر الثقيل للأماكن المفتوحة."
+    },
+    {
+     "title": "جرّب على الجلد",
+     "text": "مو على الورق فقط."
+    },
+    {
+     "title": "انتظر ساعة",
+     "text": "قبل ما تحكم على الرائحة."
+    }
+   ]
+  },
+  {
+   "layout": "statement",
+   "variant": "center",
+   "text": "العطر الجيد **يُلاحظ** ولا يُفرض.",
+   "support": ""
+  },
+  {
+   "layout": "quote",
+   "quote": "أقل رشّة في المكان الصحيح أفضل من كثرة في كل مكان.",
+   "author": "نصيحة متداولة بين صنّاع العطور"
+  },
+  {
+   "layout": "cta",
+   "title": "احفظ الدليل لمشوارك الجاي",
+   "action": "احفظ المنشور"
+  }
+ ]
+}

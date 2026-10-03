@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "tokenDoc": {
+    "bg": "لون الخلفية الأساسي", "bg2": "لون خلفية ثانوي للتدرجات والمساحات", "surface": "لون البطاقات واللوحات", "ink": "لون النص الأساسي",
+    "muted": "لون النص الثانوي", "accent": "اللون المميز للهوية والتأكيد", "accent2": "لون مميز ثانوي", "line": "لون الخطوط الفاصلة",
+    "headFont": "معرّف خط العناوين من registry/fonts.json", "bodyFont": "معرّف خط النص", "accentFont": "خط التسميات الصغيرة/الأرقام",
+    "headWeight": "وزن العناوين", "bodyWeight": "وزن النص", "lhHead": "ارتفاع سطر العناوين", "lhBody": "ارتفاع سطر النص",
+    "radius": "استدارة الزوايا بوحدة u (u = الضلع الأقصر ÷ 1080)", "margin": "الهامش بوحدة u", "titleScale": "مضاعف حجم العناوين"
+  },
+  "traits": {
+    "grain": { "name_ar": "حبيبات فيلم خفيفة", "incompatible": [] },
+    "paper": { "name_ar": "ملمس ورق", "incompatible": ["glass"] },
+    "halftone": { "name_ar": "نقاط طباعة (هافتون)", "incompatible": ["glass"] },
+    "grid": { "name_ar": "خطوط شبكة ظاهرة", "incompatible": ["paper"] },
+    "dots": { "name_ar": "شبكة نقاط", "incompatible": [] },
+    "glass": { "name_ar": "لوحات زجاجية ضبابية", "incompatible": ["paper", "halftone", "hard-shadow"] },
+    "hard-shadow": { "name_ar": "ظلال صلبة مزاحة", "incompatible": ["glass", "soft-shadow"] },
+    "soft-shadow": { "name_ar": "ظلال ناعمة", "incompatible": ["hard-shadow"] },
+    "outline": { "name_ar": "حدود سميكة للعناصر", "incompatible": [] },
+    "rounded": { "name_ar": "زوايا دائرية كبيرة", "incompatible": ["sharp"] },
+    "sharp": { "name_ar": "زوايا حادة", "incompatible": ["rounded"] },
+    "frame": { "name_ar": "إطار رفيع حول الشريحة", "incompatible": [] },
+    "marker": { "name_ar": "تظليل بقلم ماركر", "incompatible": [] },
+    "duotone": { "name_ar": "صور بلونين", "incompatible": [] },
+    "mesh": { "name_ar": "تدرج لوني شبكي", "incompatible": ["paper"] },
+    "noise-fade": { "name_ar": "تلاشي لوني في الأطراف", "incompatible": [] },
+    "stripes": { "name_ar": "شريط خطوط عمودية أسفل الشريحة", "incompatible": ["grid"] }
+  },
+  "styles": [
+    {
+      "id": "editorial", "name_ar": "تحريري / مجلة", "name_en": "Editorial / Magazine",
+      "tokens": { "bg": "#F3EEE4", "bg2": "#E9E1D2", "surface": "#FBF8F2", "ink": "#1C1A16", "muted": "#6B6357", "accent": "#A8322A", "accent2": "#2F4A3A", "line": "#1C1A16",
+        "headFont": "noto-naskh-arabic", "bodyFont": "ibm-plex-sans-arabic", "accentFont": "playfair-display", "headWeight": 700, "bodyWeight": 400, "lhHead": 1.32, "lhBody": 1.6, "radius": 0, "margin": 84, "titleScale": 1.0 },
+      "palettes": { "classic": {}, "forest": { "bg": "#EEF0E8", "accent": "#2F5D3A", "accent2": "#B5832A" }, "night": { "bg": "#15161A", "bg2": "#1F2026", "surface": "#1F2026", "ink": "#F1ECE2", "muted": "#A49C8E", "accent": "#E0A458", "line": "#F1ECE2" } },
+      "traits": ["paper", "sharp"],
+      "spec": {
+        "layout": "شبكة أعمدة غير متماثلة، مساحات بيضاء واسعة، عنوان ضخم مقابل نص قصير في عمود ضيق، خطوط فاصلة رفيعة (hairline) وأرقام صفحات كمجلة.",
+        "typography": "عناوين نسخ عريضة (Noto Naskh/Amiri) بأحجام كبيرة جدًا، نص سانس واضح، تسميات صغيرة (kicker) بلون مميز. لا تباعد حروف في العربي.",
+        "color": "خلفية ورقية دافئة + حبر داكن + لون مميز واحد عميق (أحمر طوب/أخضر غامق). استخدام اللون المميز للتأكيد فقط.",
+        "spacing": "هامش 84u، تباعد عمودي سخي، فقرة لا تتجاوز 45 حرفًا تقريبًا للسطر.",
+        "images": "صور مؤطرة بخط رفيع أو بنزف كامل مع تعليق تحتها بخط صغير. تُقص الصور الفوتوغرافية بـ cover مع الحفاظ على نقطة التركيز.",
+        "decoration": "خطوط أفقية رفيعة، أرقام أعداد كبيرة باهتة، علامة اقتباس ضخمة، ملمس ورق خفيف.",
+        "contrast": "نسبة تباين 7:1 للنص الأساسي على الورق، والتسميات بلون مميز لا تقل عن 4.5:1.",
+        "content": "مقالات رأي، تحليل، قصص، معلومات ثقافية، محتوى فكري ومحتوى علامات تجارية راقية.",
+        "accessibility": "النص الأساسي لا يقل عن 32px على عرض 1080. عدم الاعتماد على اللون وحده لنقل المعنى.",
+        "assets": "لا يحتاج أصولًا؛ الصور الفوتوغرافية اختيارية وتحسّن النتيجة."
+      }
+    },
+    {
+      "id": "minimal", "name_ar": "طباعة بسيطة (مينيمال)", "name_en": "Minimal typography",
+      "tokens": { "bg": "#FAFAF7", "bg2": "#F0F0EB", "surface": "#FFFFFF", "ink": "#121212", "muted": "#626262", "accent": "#1F5EFF", "accent2": "#121212", "line": "#D9D9D2",
+        "headFont": "ibm-plex-sans-arabic", "bodyFont": "ibm-plex-sans-arabic", "accentFont": "ibm-plex-sans-arabic", "headWeight": 600, "bodyWeight": 400, "lhHead": 1.3, "lhBody": 1.6, "radius": 0, "margin": 96, "titleScale": 0.92 },
+      "palettes": { "light": {}, "dark": { "bg": "#111111", "bg2": "#1A1A1A", "surface": "#1A1A1A", "ink": "#F5F5F2", "muted": "#9A9A95", "accent": "#C8FF4D", "line": "#2E2E2E" }, "sand": { "bg": "#EFE9DF", "muted": "#5C5A55", "accent": "#B04A27" } },
+      "traits": [],
+      "spec": {
+        "layout": "فكرة واحدة لكل شريحة، محاذاة بداية قوية (يمين في العربي)، فراغ كبير مقصود، عناصر قليلة جدًا.",
+        "typography": "عائلة خط واحدة بوزنين أو ثلاثة. تسلسل هرمي بالحجم والوزن لا باللون.",
+        "color": "أحادي تقريبًا + لون مميز واحد يُستخدم مرة واحدة في الشريحة كحد أقصى.",
+        "spacing": "هامش 96u، مسافات كبيرة بين الكتل، لا بطاقات ولا إطارات.",
+        "images": "نادرًا؛ إن وجدت فهي صغيرة ومحاطة بفراغ أو بنزف كامل دون مؤثرات.",
+        "decoration": "لا زخارف. رقم الشريحة وخط رفيع فقط.",
+        "contrast": "تباين عالٍ جدًا للنص (≥ 10:1)، النص الثانوي ≥ 4.5:1.",
+        "content": "نصائح، أفكار، اقتباسات، محتوى شخصي واحترافي، ملخصات.",
+        "accessibility": "أحجام نص كبيرة، أسطر قصيرة، تجنب الرمادي الفاتح جدًا.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "swiss", "name_ar": "سويسري / شبكي", "name_en": "Swiss / grid-based",
+      "tokens": { "bg": "#EFEFEA", "bg2": "#E2E2DC", "surface": "#FFFFFF", "ink": "#0D0D0D", "muted": "#575757", "accent": "#E2231A", "accent2": "#0D0D0D", "line": "#0D0D0D",
+        "headFont": "readex-pro", "bodyFont": "readex-pro", "accentFont": "space-grotesk", "headWeight": 700, "bodyWeight": 400, "lhHead": 1.22, "lhBody": 1.55, "radius": 0, "margin": 72, "titleScale": 1.05 },
+      "palettes": { "red": {}, "blue": { "accent": "#0046FF" }, "black": { "bg": "#0D0D0D", "bg2": "#1A1A1A", "surface": "#1A1A1A", "ink": "#F2F2EE", "muted": "#9A9A9A", "accent": "#FF3B1F", "line": "#F2F2EE" } },
+      "traits": ["grid", "sharp"],
+      "spec": {
+        "layout": "شبكة 6 أعمدة ظاهرة أو ضمنية، كل عنصر يلتصق بخطوط الشبكة، أرقام ضخمة، كتل لونية مستطيلة، محاذاة صارمة.",
+        "typography": "سانس هندسي (Readex Pro) بأوزان قوية، أحجام متباينة بشدة، تسميات لاتينية/أرقام بخط Space Grotesk.",
+        "color": "أبيض مكسور + أسود + أحمر سويسري (أو أزرق). لا تدرجات.",
+        "spacing": "هامش 72u، تباعد بمضاعفات ثابتة للشبكة.",
+        "images": "صور مقصوصة بزوايا حادة داخل خلايا الشبكة، تدرج رمادي اختياري.",
+        "decoration": "خطوط الشبكة، أسهم، أرقام ترقيم كبيرة، كتل لون مسطحة.",
+        "contrast": "أسود على فاتح ≥ 15:1؛ الأبيض على الأحمر ≥ 4.5:1 للنص الكبير فقط.",
+        "content": "شرح منظم، قوائم، خطوات، بيانات، محتوى تصميمي وتعليمي.",
+        "accessibility": "الأحمر لا يُستخدم وحده لنقل معنى (خطأ/تحذير) دون نص.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "bold", "name_ar": "طباعة جريئة", "name_en": "Bold typography",
+      "tokens": { "bg": "#FFE14D", "bg2": "#FFD000", "surface": "#111111", "ink": "#111111", "muted": "#3A3420", "accent": "#111111", "accent2": "#FF4D2E", "line": "#111111",
+        "headFont": "alexandria", "bodyFont": "cairo", "accentFont": "alexandria", "headWeight": 900, "bodyWeight": 600, "lhHead": 1.12, "lhBody": 1.5, "radius": 0, "margin": 72, "titleScale": 1.3 },
+      "palettes": { "yellow": {}, "black": { "bg": "#111111", "bg2": "#000000", "surface": "#FFE14D", "ink": "#FFFFFF", "muted": "#BDBDBD", "accent": "#FFE14D", "accent2": "#FF4D2E", "line": "#FFFFFF" }, "red": { "bg": "#FF3D2E", "bg2": "#E8281A", "surface": "#111111", "ink": "#FFFFFF", "muted": "#FFE0DC", "accent": "#111111", "accent2": "#FFE14D", "line": "#FFFFFF" } },
+      "traits": ["sharp"],
+      "spec": {
+        "layout": "النص هو التصميم: عناوين تملأ عرض الشريحة، كلمة مفتاحية بحجم مضاعف، تبديل خلفيات بين الشرائح.",
+        "typography": "أوزان 800–900 (Alexandria/Cairo Black)، ارتفاع سطر ضيق للعناوين (≈1.1) مع ترك مساحة كافية لنقاط وحروف العربية الصاعدة والنازلة.",
+        "color": "لونان متباينان بقوة (أصفر/أسود أو أحمر/أبيض) مع لون ثالث للإبراز.",
+        "spacing": "هامش 72u، عناصر قليلة، فراغات حادة.",
+        "images": "اختيارية؛ قص جريء أو صورة مفرغة فوق لون مسطح.",
+        "decoration": "أشرطة لونية، أسهم كبيرة، تسطير سميك، أرقام ضخمة.",
+        "contrast": "≥ 7:1 لأن الخلفيات مشبعة.",
+        "content": "رسائل قوية، hooks، حقائق صادمة، إعلانات، تحفيز.",
+        "accessibility": "لا تكتب فقرات طويلة بوزن 900؛ النص الطويل بوزن 500–600.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "product", "name_ar": "عرض منتجات", "name_en": "Product showcase",
+      "tokens": { "bg": "#F1EFEC", "bg2": "#E2DED8", "surface": "#FFFFFF", "ink": "#161616", "muted": "#5E5A55", "accent": "#0F6B5C", "accent2": "#E8B04B", "line": "#CFCAC2",
+        "headFont": "almarai", "bodyFont": "almarai", "accentFont": "readex-pro", "headWeight": 800, "bodyWeight": 400, "lhHead": 1.3, "lhBody": 1.6, "radius": 28, "margin": 72, "titleScale": 1.0 },
+      "palettes": { "studio": {}, "dark": { "bg": "#151515", "bg2": "#2A2A2A", "surface": "#222222", "ink": "#F5F3EF", "muted": "#A8A39C", "accent": "#E8B04B", "line": "#3A3A3A" }, "blush": { "bg": "#F6E9E4", "bg2": "#EBD3CB", "accent": "#B4475A" } },
+      "traits": ["soft-shadow", "rounded"],
+      "spec": {
+        "layout": "المنتج هو البطل: يشغل 45–65% من الشريحة على منصة/مسرح لوني، النص في منطقة منفصلة لا تغطي المنتج.",
+        "typography": "سانس واضح ودود (Almarai)، اسم المنتج كبير، المزايا في رقائق (chips) قصيرة، السعر بخط أرقام بارز.",
+        "color": "خلفية استوديو محايدة متدرجة + لون الهوية للأزرار والأسعار.",
+        "spacing": "هامش 72u، مسافة أمان حول المنتج لا تقل عن 40u.",
+        "images": "صور المنتج الأصلية فقط بـ object-fit: contain، بدون تمطيط أو تغيير ألوان، ظل أرضي ناعم. الصور المفرغة (PNG شفاف) تعطي أفضل نتيجة.",
+        "decoration": "منصة دائرية/بيضاوية، توهج خلفي ناعم، شارات (جديد/الأكثر مبيعًا) فقط إن قدّمها المستخدم.",
+        "contrast": "السعر وزر الطلب ≥ 4.5:1.",
+        "content": "منتجات، متاجر، إطلاقات، عروض حقيقية، مقارنة مواصفات.",
+        "accessibility": "لا تضع نصًا فوق المنتج. الأسعار بأرقام كبيرة واضحة.",
+        "assets": "صورة منتج حقيقية واحدة على الأقل (يفضل PNG بخلفية شفافة وبدقة ≥ 1000px)."
+      }
+    },
+    {
+      "id": "luxury", "name_ar": "فاخر / بريميوم", "name_en": "Premium / Luxury",
+      "tokens": { "bg": "#0F0E0C", "bg2": "#1B1915", "surface": "#1B1915", "ink": "#F3EBDD", "muted": "#B3A792", "accent": "#C9A45C", "accent2": "#8C7A55", "line": "#C9A45C",
+        "headFont": "el-messiri", "bodyFont": "ibm-plex-sans-arabic", "accentFont": "playfair-display", "headWeight": 600, "bodyWeight": 400, "lhHead": 1.35, "lhBody": 1.7, "radius": 0, "margin": 104, "titleScale": 0.95 },
+      "palettes": { "noir-gold": {}, "ivory": { "bg": "#F4EEE3", "bg2": "#E9E0D0", "surface": "#FBF7EF", "ink": "#1D1A15", "muted": "#7A6E5C", "accent": "#9C7A3C", "line": "#9C7A3C" }, "emerald": { "bg": "#0C1F1A", "bg2": "#12302A", "surface": "#12302A", "ink": "#F1EADB", "accent": "#D2B26E", "line": "#D2B26E" } },
+      "traits": ["frame", "grain"],
+      "spec": {
+        "layout": "تكوين متمركز ومتماثل، عناصر قليلة جدًا، إطار ذهبي رفيع، مسافات واسعة توحي بالهدوء.",
+        "typography": "عناوين El Messiri/Amiri بوزن متوسط، تسميات لاتينية بخط Playfair، لا أوزان ثقيلة.",
+        "color": "داكن عميق + ذهبي/عاجي، أو عاجي فاتح + ذهبي داكن. بدون ألوان مشبعة.",
+        "spacing": "هامش 104u، سطور قصيرة، مسافة كبيرة بين العنوان والنص.",
+        "images": "صور منتج على خلفية داكنة مع إضاءة جانبية ناعمة، بدون مؤثرات مبالغ فيها.",
+        "decoration": "إطار مزدوج رفيع، فواصل بزخرفة صغيرة، حبيبات خفيفة جدًا.",
+        "contrast": "الذهبي على الأسود ≥ 7:1 للعناوين؛ النص الأساسي بالعاجي.",
+        "content": "عطور، مجوهرات، عقارات راقية، مطاعم فاخرة، خدمات حصرية.",
+        "accessibility": "النص الثانوي العاجي الباهت لا يقل عن 4.5:1.",
+        "assets": "شعار (اختياري)، صور منتج عالية الدقة (اختياري)."
+      }
+    },
+    {
+      "id": "collage", "name_ar": "قصاصات ورق / كولاج", "name_en": "Paper cutout / collage",
+      "tokens": { "bg": "#E9DFCC", "bg2": "#D8C9AE", "surface": "#FFFDF7", "ink": "#211C17", "muted": "#5C5045", "accent": "#E4572E", "accent2": "#2E86AB", "line": "#211C17",
+        "headFont": "lalezar", "bodyFont": "almarai", "accentFont": "reem-kufi-fun", "headWeight": 400, "bodyWeight": 400, "lhHead": 1.35, "lhBody": 1.55, "radius": 4, "margin": 76, "titleScale": 1.05 },
+      "palettes": { "kraft": {}, "pastel": { "bg": "#F3E7E9", "bg2": "#E6D3D7", "accent": "#F28482", "accent2": "#84A59D" }, "night": { "bg": "#22333B", "bg2": "#1B2930", "surface": "#F2F4F3", "ink": "#22333B", "muted": "#4F5D63", "accent": "#F2A541", "accent2": "#E07A5F" } },
+      "traits": ["paper", "hard-shadow"],
+      "spec": {
+        "layout": "طبقات ورق مقصوصة بحواف غير منتظمة، بطاقات مائلة قليلًا، شريط لاصق، تداخل مقصود دون تغطية النص.",
+        "typography": "عناوين Reem Kufi Fun/Marhey مرحة، نص Almarai واضح على بطاقات ورقية فاتحة.",
+        "color": "خلفية كرافت/ورقية + 2 ألوان مقصوصة مشبعة.",
+        "spacing": "هامش 76u، البطاقات تترك مسافة 24u بين بعضها.",
+        "images": "صور بإطار ورقي أبيض مائل، أو مقصوصة بشكل حر (clip-path).",
+        "decoration": "أشكال ورقية ممزقة، شريط لاصق شبه شفاف، دبابيس، ظلال ورق صلبة.",
+        "contrast": "النص دائمًا على بطاقة ورقية فاتحة (≥ 7:1) لا على الملمس مباشرة.",
+        "content": "قصص، محتوى مجتمعي، تعليم ممتع، فعاليات، مشاريع يدوية.",
+        "accessibility": "ميل البطاقات ≤ 3 درجات حتى لا تصعب القراءة.",
+        "assets": "صور اختيارية؛ بدونها نستخدم أشكالًا ورقية مولدة."
+      }
+    },
+    {
+      "id": "playful", "name_ar": "مرح / رسومي", "name_en": "Illustrated / playful",
+      "tokens": { "bg": "#FFF4E6", "bg2": "#FFE3C2", "surface": "#FFFFFF", "ink": "#2B2340", "muted": "#5E5577", "accent": "#6847F0", "accent2": "#FF8A5B", "line": "#2B2340",
+        "headFont": "baloo-bhaijaan-2", "bodyFont": "baloo-bhaijaan-2", "accentFont": "baloo-bhaijaan-2", "headWeight": 800, "bodyWeight": 500, "lhHead": 1.2, "lhBody": 1.5, "radius": 44, "margin": 76, "titleScale": 1.05 },
+      "palettes": { "peach": {}, "mint": { "bg": "#E8FFF5", "bg2": "#C9F5E3", "accent": "#00A878", "accent2": "#FF6F91" }, "sky": { "bg": "#EAF4FF", "bg2": "#CFE6FF", "accent": "#3D5AFE", "accent2": "#FFC93C" } },
+      "traits": ["rounded", "outline"],
+      "spec": {
+        "layout": "أشكال عضوية (blobs)، بطاقات دائرية، عناصر رسومية بسيطة مولدة بـ SVG تتوزع بحيوية حول النص.",
+        "typography": "Baloo Bhaijaan 2 دائري وودود، عناوين 800، نص 500.",
+        "color": "خلفية فاتحة دافئة + بنفسجي/برتقالي أو ألوان مرحة متناسقة.",
+        "spacing": "هامش 76u، زوايا 44u.",
+        "images": "صور داخل أشكال دائرية/عضوية مع حد سميك.",
+        "decoration": "نجوم صغيرة، خطوط متموجة، فقاعات، حدود سميكة بلون النص.",
+        "contrast": "النص الداكن على الفاتح ≥ 7:1.",
+        "content": "أطفال وتعليم، تطبيقات استهلاكية، نصائح خفيفة، فعاليات.",
+        "accessibility": "تجنب وضع الزخارف خلف النص مباشرة.",
+        "assets": "لا يحتاج أصولًا؛ الرسومات تجريدية مولدة وليست شخصيات أو رسومًا توضيحية واقعية."
+      }
+    },
+    {
+      "id": "comic", "name_ar": "كوميك / بوب آرت", "name_en": "Comic / Pop art",
+      "tokens": { "bg": "#FFD23F", "bg2": "#FFB800", "surface": "#FFFFFF", "ink": "#111111", "muted": "#333333", "accent": "#EE4266", "accent2": "#3BCEAC", "line": "#111111",
+        "headFont": "lalezar", "bodyFont": "cairo", "accentFont": "marhey", "headWeight": 400, "bodyWeight": 700, "lhHead": 1.25, "lhBody": 1.45, "radius": 6, "margin": 64, "titleScale": 1.1 },
+      "palettes": { "yellow": {}, "cyan": { "bg": "#3BCEAC", "bg2": "#2BB596", "accent": "#EE4266", "accent2": "#FFD23F" }, "pink": { "bg": "#FF6B9A", "bg2": "#F2507F", "accent": "#FFD23F", "accent2": "#3BCEAC" } },
+      "traits": ["halftone", "outline", "hard-shadow"],
+      "spec": {
+        "layout": "لوحات كوميك بإطارات سوداء سميكة، فقاعات كلام، انفجارات (burst) للأرقام والكلمات المهمة.",
+        "typography": "Lalezar للعناوين (وزن واحد ثقيل)، Cairo Bold للنص داخل فقاعات بيضاء.",
+        "color": "ألوان طباعة مشبعة (أصفر/وردي/فيروزي) + أسود.",
+        "spacing": "هامش 64u، إطارات بسمك 6u.",
+        "images": "صور بتأثير هافتون/تباين عالٍ داخل لوحات.",
+        "decoration": "نقاط هافتون، خطوط سرعة، انفجارات نجمية، ظلال صلبة مزاحة.",
+        "contrast": "النص دائمًا داخل فقاعة/لوحة بيضاء أو بلون أسود على أصفر.",
+        "content": "ترفيه، تسويق شبابي، حقائق ممتعة، مقارنات.",
+        "accessibility": "النقاط الخلفية لا تتداخل مع النص.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "retro", "name_ar": "ريترو", "name_en": "Retro",
+      "tokens": { "bg": "#F4E4C1", "bg2": "#EBD3A2", "surface": "#FFF6E3", "ink": "#3B2416", "muted": "#654630", "accent": "#C2461A", "accent2": "#E9A23B", "line": "#3B2416",
+        "headFont": "rakkas", "bodyFont": "changa", "accentFont": "changa", "headWeight": 400, "bodyWeight": 500, "lhHead": 1.35, "lhBody": 1.5, "radius": 36, "margin": 76, "titleScale": 1.05 },
+      "palettes": { "seventies": {}, "teal": { "bg": "#E8E2CF", "accent": "#1E7F7A", "accent2": "#E07A3F" }, "night": { "bg": "#2A1B12", "bg2": "#3A2618", "surface": "#3A2618", "ink": "#F4E4C1", "muted": "#C9A27A", "accent": "#F28C28", "accent2": "#E9C46A", "line": "#F4E4C1" } },
+      "traits": ["grain", "rounded"],
+      "spec": {
+        "layout": "أقواس شمس ذات خطوط متوازية، شارات دائرية، أشرطة ملونة متدرجة، توسيط أو محاذاة بداية.",
+        "typography": "Rakkas للعناوين (طابع قديم مزخرف) + Changa للنص.",
+        "color": "برتقالي محروق، خردلي، بني، كريمي.",
+        "spacing": "هامش 76u.",
+        "images": "صور بتدرج دافئ (sepia خفيف) داخل إطارات مستديرة.",
+        "decoration": "شمس غاربة بخطوط، موجات، حبيبات فيلم.",
+        "contrast": "البني الداكن على الكريمي ≥ 9:1.",
+        "content": "مقاهٍ، علامات بطابع تراثي، قصص، مناسبات، ذكريات.",
+        "accessibility": "Rakkas للعناوين القصيرة فقط.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "infographic", "name_ar": "إنفوجرافيك", "name_en": "Infographic",
+      "tokens": { "bg": "#F7F9FC", "bg2": "#E9EEF6", "surface": "#FFFFFF", "ink": "#0E1B2C", "muted": "#51607A", "accent": "#0A7CFF", "accent2": "#FF8A00", "line": "#C9D3E3",
+        "headFont": "readex-pro", "bodyFont": "readex-pro", "accentFont": "readex-pro", "headWeight": 700, "bodyWeight": 400, "lhHead": 1.28, "lhBody": 1.55, "radius": 20, "margin": 72, "titleScale": 0.95 },
+      "palettes": { "blue": {}, "green": { "accent": "#0E9F6E", "accent2": "#F59E0B" }, "dark": { "bg": "#0E1726", "bg2": "#16223A", "surface": "#16223A", "ink": "#EAF0FA", "muted": "#9AA8C2", "accent": "#3DA0FF", "accent2": "#FFB020", "line": "#2A3A58" } },
+      "traits": ["dots", "rounded"],
+      "spec": {
+        "layout": "أرقام بارزة، أشرطة بيانية، أيقونات/دوائر مرقمة، شبكات بطاقات، مخططات تدفق بسيطة.",
+        "typography": "Readex Pro واضح للأرقام والنصوص، الأرقام بحجم 2–4 أضعاف العنوان.",
+        "color": "لون أساسي + لون ثانوي للمقارنة + رماديات زرقاء.",
+        "spacing": "هامش 72u، شبكة منتظمة 2–3 أعمدة.",
+        "images": "أيقونات ومخططات بدل الصور.",
+        "decoration": "شبكة نقاط خفيفة، خطوط موصلة، أشرطة تقدّم.",
+        "contrast": "ألوان البيانات تتباين مع الخلفية ≥ 3:1 والنص ≥ 4.5:1.",
+        "content": "إحصائيات، أبحاث، مقارنات رقمية، خطوات وعمليات.",
+        "accessibility": "كل رقم معه وصف نصي، الأشرطة معها قيمها مكتوبة. لا أرقام بدون مصدر.",
+        "assets": "لا يحتاج أصولًا؛ يتطلب أرقامًا موثقة."
+      }
+    },
+    {
+      "id": "tech", "name_ar": "تقني / SaaS", "name_en": "Tech / SaaS",
+      "tokens": { "bg": "#0A0F1E", "bg2": "#111A33", "surface": "#121B33", "ink": "#EEF2FF", "muted": "#9AA5C4", "accent": "#5865F2", "accent2": "#22D3EE", "line": "#26314F",
+        "headFont": "alexandria", "bodyFont": "ibm-plex-sans-arabic", "accentFont": "jetbrains-mono", "headWeight": 700, "bodyWeight": 400, "lhHead": 1.28, "lhBody": 1.6, "radius": 22, "margin": 72, "titleScale": 0.98 },
+      "palettes": { "midnight": {}, "light": { "bg": "#F6F7FB", "bg2": "#E8EBF5", "surface": "#FFFFFF", "ink": "#0C1226", "muted": "#59627D", "accent": "#4F46E5", "accent2": "#0891B2", "line": "#D9DDEA" }, "matrix": { "bg": "#07130E", "bg2": "#0D2219", "surface": "#0D2219", "accent": "#2EE59D", "accent2": "#A3F7BF", "line": "#1B3A2C" } },
+      "traits": ["grid", "rounded"],
+      "spec": {
+        "layout": "بطاقات واجهة (UI cards)، شبكة خلفية، توهجات لونية، تسميات أحادية المسافة، مقارنات مزايا.",
+        "typography": "Alexandria للعناوين، IBM Plex Sans Arabic للنص، JetBrains Mono للتسميات اللاتينية والأرقام التقنية.",
+        "color": "كحلي ليلي + بنفسجي/سماوي متوهج، أو نسخة فاتحة.",
+        "spacing": "هامش 72u، بطاقات بزوايا 22u.",
+        "images": "لقطات شاشة داخل إطار جهاز/نافذة مع حدود رفيعة.",
+        "decoration": "شبكة خطوط باهتة، هالات تدرج، نقاط اتصال، أكواد قصيرة.",
+        "contrast": "النص الأساسي ≥ 12:1 على الكحلي؛ التوهجات لا تمر خلف النص.",
+        "content": "منتجات رقمية، تطبيقات، ذكاء اصطناعي، برمجة، شركات ناشئة.",
+        "accessibility": "تجنب النص الرمادي الباهت على الكحلي.",
+        "assets": "لقطات شاشة اختيارية."
+      }
+    },
+    {
+      "id": "gradient", "name_ar": "تدرجات ناعمة", "name_en": "Soft gradients",
+      "tokens": { "bg": "#F6EFFF", "bg2": "#FFE9DE", "surface": "#FFFFFFCC", "ink": "#1F1633", "muted": "#5D5373", "accent": "#7C3AED", "accent2": "#F97393", "line": "#D9CFF0",
+        "headFont": "readex-pro", "bodyFont": "readex-pro", "accentFont": "readex-pro", "headWeight": 600, "bodyWeight": 400, "lhHead": 1.3, "lhBody": 1.6, "radius": 36, "margin": 80, "titleScale": 1.0 },
+      "palettes": { "lavender": {}, "ocean": { "bg": "#E6F6FF", "bg2": "#E9FFF4", "accent": "#0EA5E9", "accent2": "#10B981", "ink": "#0B2233" }, "sunset": { "bg": "#FFF1E6", "bg2": "#FFE0EC", "accent": "#F97316", "accent2": "#EC4899" } },
+      "traits": ["mesh", "rounded", "soft-shadow"],
+      "spec": {
+        "layout": "خلفيات تدرج شبكي متغيرة بين الشرائح، بطاقات بيضاء شبه شفافة، محاذاة مركزية أو بداية.",
+        "typography": "Readex Pro بوزن 600 للعناوين، نص 400.",
+        "color": "ثلاث درجات باستيل متقاربة + لون مميز أعمق للنص المؤكد.",
+        "spacing": "هامش 80u، زوايا 36u.",
+        "images": "صور بزوايا مستديرة وظل ناعم.",
+        "decoration": "بقع تدرج ضبابية كبيرة، دوائر ناعمة.",
+        "contrast": "النص الداكن على البطاقات البيضاء ≥ 7:1.",
+        "content": "صحة نفسية، نمط حياة، تطبيقات، تعليم، محتوى هادئ.",
+        "accessibility": "لا نص مباشرة على أجزاء تدرج متوسطة السطوع دون بطاقة.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "glass", "name_ar": "زجاجي (Glassmorphism)", "name_en": "Glassmorphism",
+      "tokens": { "bg": "#1B1446", "bg2": "#0E2A5C", "surface": "#120C3A99", "ink": "#FFFFFF", "muted": "#E4E1F7", "accent": "#FF7AD9", "accent2": "#5CE1E6", "line": "#FFFFFF55",
+        "headFont": "alexandria", "bodyFont": "ibm-plex-sans-arabic", "accentFont": "alexandria", "headWeight": 700, "bodyWeight": 400, "lhHead": 1.28, "lhBody": 1.6, "radius": 40, "margin": 72, "titleScale": 1.0 },
+      "palettes": { "aurora": {}, "sunrise": { "bg": "#3B0F3F", "bg2": "#7A1E3A", "accent": "#FFB347", "accent2": "#FF5E7E" }, "ice": { "bg": "#0B2E4A", "bg2": "#0F4C5C", "accent": "#7CF2FF", "accent2": "#B8FFCF" } },
+      "traits": ["glass", "rounded"],
+      "spec": {
+        "layout": "بقع لونية زاهية في الخلفية + لوحات زجاجية ضبابية تحمل النص، طبقات عمق واضحة.",
+        "typography": "Alexandria للعناوين، IBM Plex Sans Arabic للنص، أبيض.",
+        "color": "خلفية داكنة غنية مع بقع نيون (وردي/سماوي/بنفسجي).",
+        "spacing": "هامش 72u، لوحات بزوايا 40u وحد أبيض شفاف 1.5u.",
+        "images": "صور داخل لوحة زجاجية أو خلفها مع ضبابية.",
+        "decoration": "بقع ضبابية، حدود لامعة، انعكاسات خفيفة.",
+        "contrast": "النص الأبيض يجب أن يحقق ≥ 4.5:1 فوق اللوحة (نفحصه آليًا بعد الرسم).",
+        "content": "تقنية، تطبيقات، موسيقى، فعاليات ليلية، عروض رقمية.",
+        "accessibility": "لا تستخدم شفافية أعلى من 30% للوحات التي عليها نص صغير.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "geometric", "name_ar": "هندسي", "name_en": "Geometric",
+      "tokens": { "bg": "#F5F0E6", "bg2": "#EAE2D2", "surface": "#FFFFFF", "ink": "#14213D", "muted": "#4A5568", "accent": "#E63946", "accent2": "#2A9D8F", "line": "#14213D",
+        "headFont": "kufam", "bodyFont": "readex-pro", "accentFont": "kufam", "headWeight": 800, "bodyWeight": 400, "lhHead": 1.3, "lhBody": 1.55, "radius": 0, "margin": 76, "titleScale": 1.0 },
+      "palettes": { "bauhaus": {}, "navy": { "bg": "#14213D", "bg2": "#1D2D50", "surface": "#1D2D50", "ink": "#F5F0E6", "muted": "#B8C0D0", "accent": "#FCA311", "accent2": "#E63946", "line": "#F5F0E6" }, "earth": { "bg": "#EFE6DA", "accent": "#C8553D", "accent2": "#588B8B", "ink": "#2D2A32" } },
+      "traits": ["sharp"],
+      "spec": {
+        "layout": "دوائر وأرباع دوائر ومثلثات وأشرطة مسطحة بتكوين باوهاوس، توازن بين الكتل اللونية والنص.",
+        "typography": "Kufam كوفي هندسي للعناوين، Readex Pro للنص.",
+        "color": "ألوان أساسية مسطحة (أحمر/أزرق مخضر/أصفر) على كريمي أو كحلي.",
+        "spacing": "هامش 76u، الأشكال تتوزع في الأطراف بعيدًا عن النص.",
+        "images": "صور داخل أشكال هندسية (دائرة/نصف دائرة).",
+        "decoration": "أشكال هندسية متغيرة بين الشرائح، تكرار نمطي.",
+        "contrast": "النص على الكريمي ≥ 10:1.",
+        "content": "تعليم، هوية علامات حديثة، معمار، فعاليات ثقافية.",
+        "accessibility": "الأشكال لا تقطع النص.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "sketch", "name_ar": "رسم يدوي / سكتش", "name_en": "Hand-drawn / sketch",
+      "tokens": { "bg": "#FDFBF4", "bg2": "#F3EEDC", "surface": "#FFFFFF", "ink": "#22252B", "muted": "#5A5F6A", "accent": "#2563EB", "accent2": "#F4B400", "line": "#22252B",
+        "headFont": "playpen-sans-arabic", "bodyFont": "playpen-sans-arabic", "accentFont": "aref-ruqaa", "headWeight": 700, "bodyWeight": 400, "lhHead": 1.4, "lhBody": 1.65, "radius": 18, "margin": 80, "titleScale": 0.95 },
+      "palettes": { "notebook": {}, "blackboard": { "bg": "#1F2A24", "bg2": "#26332C", "surface": "#26332C", "ink": "#F2F2EA", "muted": "#B9C2B6", "accent": "#F7D154", "accent2": "#8FD3FE", "line": "#F2F2EA" }, "kraft": { "bg": "#E8D9BF", "accent": "#B23A48" } },
+      "traits": ["paper", "marker"],
+      "spec": {
+        "layout": "دفتر ملاحظات: خطوط مسطرة خفيفة، أسهم مرسومة باليد، دوائر وتسطير غير منتظم، صناديق بحواف متعرجة.",
+        "typography": "Playpen Sans Arabic (يدوي واضح) للعناوين والنص؛ Aref Ruqaa لعبارات قصيرة جدًا فقط.",
+        "color": "ورق فاتح + حبر داكن + قلم ماركر أزرق/أصفر.",
+        "spacing": "هامش 80u.",
+        "images": "صور ملصقة بشريط لاصق ومائلة قليلًا.",
+        "decoration": "تسطير ماركر، أسهم يدوية، نجوم مرسومة، تأثير تعرج (SVG turbulence) خفيف.",
+        "contrast": "الحبر على الورق ≥ 10:1.",
+        "content": "شروحات، نصائح تعليمية، ملخصات كتب، خطوات.",
+        "accessibility": "الخط اليدوي للعناوين والنصوص القصيرة؛ النص الطويل يُختصر.",
+        "assets": "لا يحتاج أصولًا."
+      }
+    },
+    {
+      "id": "photo", "name_ar": "فوتوغرافي", "name_en": "Photographic",
+      "tokens": { "bg": "#111111", "bg2": "#222222", "surface": "#111111CC", "ink": "#FFFFFF", "muted": "#D6D6D6", "accent": "#FFC23D", "accent2": "#FFFFFF", "line": "#FFFFFF66",
+        "headFont": "cairo", "bodyFont": "cairo", "accentFont": "cairo", "headWeight": 800, "bodyWeight": 500, "lhHead": 1.25, "lhBody": 1.55, "radius": 0, "margin": 72, "titleScale": 1.05 },
+      "palettes": { "night": {}, "warm": { "accent": "#FF8A3D" }, "clean": { "accent": "#5CE1E6" } },
+      "traits": ["noise-fade"],
+      "spec": {
+        "layout": "صورة بنزف كامل في كل شريحة مع طبقة تعتيم متدرجة (scrim) في منطقة النص فقط، النص في الثلث السفلي أو العلوي.",
+        "typography": "Cairo عريض أبيض مع ظل خفيف جدًا عند الحاجة.",
+        "color": "مستخرج من الصور + لون مميز واحد للتأكيد.",
+        "spacing": "هامش 72u.",
+        "images": "صور المستخدم الحقيقية فقط (cover مع نقطة تركيز قابلة للتحديد). لا نولّد صورًا فوتوغرافية. بدون صور نستخدم تدرجات لونية مع إفصاح.",
+        "decoration": "شبه معدوم؛ خط رفيع وترقيم.",
+        "contrast": "التعتيم يُضبط ليحقق ≥ 4.5:1 للنص الأبيض (يُفحص آليًا على الصورة الفعلية).",
+        "content": "سفر، طعام، عقار، فعاليات، قصص بصرية، منتجات في سياق استخدام.",
+        "accessibility": "لا نص فوق وجوه أو تفاصيل مزدحمة.",
+        "assets": "يتطلب صورًا فوتوغرافية حقيقية (واحدة لكل شريحة يفضل) بدقة ≥ 1080px."
+      }
+    }
+  ]
+}

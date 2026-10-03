@@ -1,0 +1,48 @@
+{
+ "meta": {
+  "title": "خمس محطات لإطلاق متجرك"
+ },
+ "canvas": {
+  "platform": "instagram-portrait"
+ },
+ "style": {
+  "preset": "gradient",
+  "palette": "ocean"
+ },
+ "continuity": {
+  "type": "path"
+ },
+ "slides": [
+  {
+   "layout": "cover",
+   "kicker": "خريطة طريق",
+   "title": "من الفكرة إلى **أول طلب**",
+   "subtitle": "تابع المسار تحت، كل شريحة محطة."
+  },
+  {
+   "layout": "statement",
+   "label": "المحطة ٢",
+   "text": "اختبر الفكرة على ٢٠ شخص قبل ما تصرف ريال.",
+   "support": "اسألهم: تشتري؟ وبكم؟"
+  },
+  {
+   "layout": "statement",
+   "label": "المحطة ٣",
+   "text": "ابدأ بمنتج واحد واضح بدل كتالوج كامل.",
+   "support": "التركيز يسهّل التسويق والتشغيل."
+  },
+  {
+   "layout": "statement",
+   "label": "المحطة ٤",
+   "text": "جهّز الدفع والشحن قبل الإعلان.",
+   "support": "أول تجربة شراء هي اللي تصنع سمعتك."
+  },
+  {
+   "layout": "cta",
+   "kicker": "المحطة ٥",
+   "title": "أطلق، اسمع، وعدّل",
+   "text": "احفظ الخريطة وارجع لها مع كل خطوة.",
+   "action": "احفظ المنشور"
+  }
+ ]
+}

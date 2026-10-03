@@ -1,0 +1,7 @@
+# بيانات اختيارية لواجهة Codex (غير مطلوبة لعمل المهارة؛ SKILL.md هو الأساس).
+interface:
+  display_name: "سياق كاروسيل | Siyaq Carousel"
+  short_description: "تصميم كاروسيل عربي جاهز للنشر وتصديره صور PNG وملف ZIP"
+  default_prompt: "سياق كاروسيل"
+policy:
+  allow_implicit_invocation: true

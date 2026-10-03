@@ -1,0 +1,37 @@
+{
+ "meta": {
+  "title": "رحلة الصباح"
+ },
+ "canvas": {
+  "platform": "instagram-portrait"
+ },
+ "style": {
+  "preset": "playful",
+  "palette": "sky"
+ },
+ "continuity": {
+  "type": "scene"
+ },
+ "slides": [
+  {
+   "layout": "cover",
+   "title": "صباحك يبدأ من **الليلة اللي قبله**",
+   "subtitle": "قصة صغيرة في أربع لحظات."
+  },
+  {
+   "layout": "statement",
+   "label": "١٠ مساءً",
+   "text": "تطفي الشاشات وتجهّز ملابس بكرة."
+  },
+  {
+   "layout": "statement",
+   "label": "٦ صباحًا",
+   "text": "تصحى بدون ما تضغط غفوة."
+  },
+  {
+   "layout": "statement",
+   "label": "٧ صباحًا",
+   "text": "تطلع وأنت **سابق يومك** بخطوة."
+  }
+ ]
+}

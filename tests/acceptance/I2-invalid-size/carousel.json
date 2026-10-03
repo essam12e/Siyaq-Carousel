@@ -1,0 +1,18 @@
+{
+ "meta": {
+  "title": "negative"
+ },
+ "canvas": {
+  "width": 100,
+  "height": 5000
+ },
+ "style": {
+  "preset": "minimal"
+ },
+ "slides": [
+  {
+   "layout": "statement",
+   "text": "اختبار"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "Font Awesome Free 7.3.1 — Icons: CC BY 4.0 (https://fontawesome.com/license/free). Brand icons are trademarks of their respective owners and are used only to indicate the user's accounts.",
+  "licenseFile": "assets/icons/FONT-AWESOME-LICENSE.txt",
+  "icons": {
+    "instagram": { "file": "instagram.svg", "label_ar": "إنستقرام", "prefix": "@", "url": "https://instagram.com/{handle}" },
+    "tiktok": { "file": "tiktok.svg", "label_ar": "تيك توك", "prefix": "@", "url": "https://tiktok.com/@{handle}" },
+    "snapchat": { "file": "snapchat.svg", "label_ar": "سناب شات", "prefix": "", "url": "https://snapchat.com/add/{handle}" },
+    "x": { "file": "x-twitter.svg", "label_ar": "إكس", "prefix": "@", "url": "https://x.com/{handle}" },
+    "facebook": { "file": "facebook.svg", "label_ar": "فيسبوك", "prefix": "", "url": "https://facebook.com/{handle}" },
+    "youtube": { "file": "youtube.svg", "label_ar": "يوتيوب", "prefix": "@", "url": "https://youtube.com/@{handle}" },
+    "linkedin": { "file": "linkedin.svg", "label_ar": "لينكدإن", "prefix": "", "url": "https://linkedin.com/in/{handle}" },
+    "whatsapp": { "file": "whatsapp.svg", "label_ar": "واتساب", "prefix": "", "url": "https://wa.me/{handle}" },
+    "telegram": { "file": "telegram.svg", "label_ar": "تيليجرام", "prefix": "@", "url": "https://t.me/{handle}" },
+    "pinterest": { "file": "pinterest.svg", "label_ar": "بنترست", "prefix": "", "url": "https://pinterest.com/{handle}" },
+    "threads": { "file": "threads.svg", "label_ar": "ثريدز", "prefix": "@", "url": "https://threads.net/@{handle}" },
+    "email": { "file": "envelope.svg", "label_ar": "البريد", "prefix": "", "url": "mailto:{handle}" },
+    "phone": { "file": "phone.svg", "label_ar": "جوال", "prefix": "", "url": "tel:{handle}" },
+    "website": { "file": "globe.svg", "label_ar": "الموقع", "prefix": "", "url": "{handle}" },
+    "location": { "file": "location-dot.svg", "label_ar": "الموقع الجغرافي", "prefix": "", "url": "" },
+    "link": { "file": "link.svg", "label_ar": "رابط", "prefix": "", "url": "{handle}" }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "grid-sun",
+  "name_ar": "شبكة وشمس (من الصورة المرجعية)",
+  "base": "geometric",
+  "source_ar": "مستخرج من reference-design.png: خلفية كريمية #F2E8D8، كحلي #0F3B5F للنص والأشكال الكبيرة، برتقالي #F26B22 كنقطة تركيز صغيرة (شمس)، شريط خطوط عمودية في الأسفل، عناوين سانس ثقيلة جدًا بمحاذاة اليمين، كثافة متوسطة-عالية بسبب الخطوط، تكوين غير متماثل بدائرة كبيرة مقصوصة عند الحافة.",
+  "tokens": { "bg": "#F2E8D8", "bg2": "#E8DCC7", "surface": "#FFF9EF", "ink": "#0F3B5F", "muted": "#3D5873", "accent": "#F26B22", "accent2": "#0F3B5F", "line": "#0F3B5F",
+    "headFont": "alexandria", "bodyFont": "readex-pro", "accentFont": "alexandria", "headWeight": 900, "lhHead": 1.18, "titleScale": 1.12 },
+  "traits": ["stripes", "sharp"]
+}

@@ -1,0 +1,88 @@
+{
+ "meta": {
+  "title": "إسبريسو دبل",
+  "slug": "product-test",
+  "testFixture": "بيانات اختبار: العلامة والشعار والحسابات والسعر خيالية لمحاكاة ما يرفعه المستخدم. صورة الإسبريسو CC0 (Rachel Michetti عبر scikit-image)."
+ },
+ "canvas": {
+  "platform": "instagram-portrait"
+ },
+ "style": {
+  "preset": "product"
+ },
+ "brand": {
+  "name": "محمصة الريحان",
+  "logo": "../../fixtures/logo-test-brand.png",
+  "colors": {
+   "primary": "#1F4D3A",
+   "secondary": "#C8963E",
+   "background": "#F6F1E7"
+  },
+  "handles": [
+   {
+    "platform": "instagram",
+    "handle": "alraihan.test"
+   }
+  ],
+  "contact": {
+   "website": "example.com/menu"
+  }
+ },
+ "assets": {
+  "espresso": "../../fixtures/espresso-cc0.png"
+ },
+ "slides": [
+  {
+   "layout": "cover",
+   "variant": "product",
+   "image": "espresso",
+   "kicker": "جديد عندنا",
+   "title": "إسبريسو **دبل** بتحميص الأسبوع",
+   "subtitle": ""
+  },
+  {
+   "layout": "product",
+   "image": "espresso",
+   "badge": "الأكثر طلبًا",
+   "name": "إسبريسو دبل",
+   "tagline": "قوام كريمي وطعم متوازن",
+   "features": [
+    "حبوب محمّصة هذا الأسبوع",
+    "جرعة مزدوجة",
+    "يقدّم مع ماء"
+   ],
+   "price": {
+    "amount": "14",
+    "currency": "ر.س"
+   }
+  },
+  {
+   "layout": "list",
+   "variant": "check",
+   "title": "ليش يعجبك؟",
+   "items": [
+    {
+     "title": "كريما ذهبية",
+     "text": "من الاستخلاص المضبوط."
+    },
+    {
+     "title": "حموضة خفيفة",
+     "text": "تناسب اللي يبدأ مع المختصة."
+    }
+   ]
+  },
+  {
+   "layout": "image",
+   "variant": "framed",
+   "image": "espresso",
+   "title": "كذا يوصلك",
+   "caption": "الصورة الفعلية للكوب اللي نقدمه في المحمصة."
+  },
+  {
+   "layout": "cta",
+   "title": "تبيه الحين؟",
+   "text": "متوفر يوميًا في المحمصة.",
+   "action": "اطلب الآن"
+  }
+ ]
+}

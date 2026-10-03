@@ -1,0 +1,1042 @@
+{
+  "meta": {
+    "date": "2026-10-03T10:13:00.353Z",
+    "node": "v22.22.0",
+    "platform": "linux-x64",
+    "passed": 14,
+    "total": 14
+  },
+  "results": [
+    {
+      "id": "—",
+      "title": "رسالة الترحيب",
+      "pass": true,
+      "seconds": 0.2,
+      "checks": [
+        {
+          "ok": true,
+          "label": "الأمر يعمل",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "السطر الأخير مطابق حرفيًا",
+          "detail": "سياق كاروسيل إحدى منتجات نطاق"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "A",
+      "title": "كاروسيل عربي ٥ شرائح بدون هوية",
+      "pass": true,
+      "seconds": 5,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "العدد الافتراضي ٥ شرائح",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا يوجد شعار مخترع",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "اتجاه RTL مفعّل",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "إعادة التصيير من المصدر تطابق الصور (اتساق التصدير)",
+          "detail": "] "
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "B",
+      "title": "ألوان هوية وشعار",
+      "pass": true,
+      "seconds": 2.4,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ألوان الهوية مطبّقة في theme.css",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشعار ظاهر في الشرائح",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف الشعار الأصلي منسوخ ضمن المصدر",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "رمز QR بحجم قابل للمسح",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "QR يشير للرابط الحقيقي المعطى فقط",
+          "detail": ""
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "C",
+      "title": "خط عربي مرفوع من المستخدم",
+      "pass": true,
+      "seconds": 1.9,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1080 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "خط Mada المرفوع مستخدم للعناوين والنص بدون حروف ناقصة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "المتصفح رسم النصوص بخط Mada فعليًا (CDP)",
+          "detail": "Mada"
+        },
+        {
+          "ok": true,
+          "label": "خط بلا حروف عربية: يتوقف ويشرح بدل الاستبدال الصامت",
+          "detail": "exit=2"
+        },
+        {
+          "ok": true,
+          "label": "لم تُصدَّر صور بخط بديل",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف خط تالف: يُرفض برسالة عربية",
+          "detail": "❌ [FONT_INVALID] خط العناوين المرفوع «corrupt-font.ttf» غير صالح: صيغة غير مدعومة. الصيغ المدعومة: TTF وOTF وWOFF وWOFF2. لن أستبدله بخط آخر بصمت."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "D",
+      "title": "صورة منتج حقيقية مع الحفاظ على شكلها",
+      "pass": true,
+      "seconds": 3.3,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف المنتج الأصلي منسوخ بايت-ببايت (بدون تعديل)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا تمطيط ولا قص لصورة المنتج",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "نسبة أبعاد المنتج محفوظة",
+          "detail": "1.500 vs 1.500"
+        },
+        {
+          "ok": true,
+          "label": "ألوان وتفاصيل المنتج مطابقة للأصل (متوسط فرق البكسل)",
+          "detail": "MAE=0.00"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "E",
+      "title": "وصف ستايل مخصص (محفوظ وقابل لإعادة الاستخدام)",
+      "pass": true,
+      "seconds": 4.8,
+      "checks": [
+        {
+          "ok": true,
+          "label": "حفظ النمط المخصص",
+          "detail": "استخدمه في carousel.json: \"style\": { \"custom\": \"olive-clay\" }"
+        },
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ألوان النمط المخصص مطبّقة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سمات النمط المدموجة مفعّلة",
+          "detail": "paper,grain,rounded"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "F",
+      "title": "تصميم موجّه بصورة مرجعية",
+      "pass": true,
+      "seconds": 2.1,
+      "checks": [
+        {
+          "ok": true,
+          "label": "تحليل الصورة المرجعية (ألوان، كثافة، مساحات)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ألوان النمط مستخرجة من المرجع",
+          "detail": "#f2e8d8/#f26b22 → #F2E8D8/#F26B22"
+        },
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "G",
+      "title": "عنصر بصري متصل عبر الشرائح",
+      "pass": true,
+      "seconds": 4.8,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "G-continuity: حواف العنصر المتصل متطابقة بين كل شريحتين",
+          "detail": "0, 0, 2.05, 0.13"
+        },
+        {
+          "ok": true,
+          "label": "G-continuity: صورة الشريط المتصل للمراجعة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 4",
+          "detail": "found=4"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 4 صورة",
+          "detail": "zip=4"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "G2-scene: حواف العنصر المتصل متطابقة بين كل شريحتين",
+          "detail": "0.03, 0.03, 0.03"
+        },
+        {
+          "ok": true,
+          "label": "G2-scene: صورة الشريط المتصل للمراجعة",
+          "detail": ""
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "H",
+      "title": "موضوع مبني على بحث مع ملف مصادر حقيقي",
+      "pass": true,
+      "seconds": 1.6,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "sources.md موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل مصدر بعنوانه ورابطه",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "تاريخ الوصول مذكور",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ربط كل مصدر بالادعاء/الشريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "توضيح حدود اليقين",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الروابط غير مطبوعة في الصور (النص المرئي المُقاس)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "sources.md مضمّن في ZIP",
+          "detail": ""
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "I",
+      "title": "أبعاد مخصصة",
+      "pass": true,
+      "seconds": 1.8,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1500×1000 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "1500×1000 كما طُلب",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "أبعاد غير صالحة (100×5000) تُرفض مع شرح القيود",
+          "detail": "❌ [CANVAS_INVALID] المقاس المخصص 100×5000 غير صالح: أصغر ضلع مسموح 320 بكسل، أكبر ضلع مسموح 4096 بكسل، النسبة بين الضلعين أكبر من 4:1 وتصعب قراءة التصميم."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "J",
+      "title": "أكثر من ٥ شرائح (١٢ شريحة)",
+      "pass": true,
+      "seconds": 2.8,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 12",
+          "detail": "found=12"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1920 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 12 صورة",
+          "detail": "zip=12"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "١٢ شريحة بدون حد صامت",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "مقاس تيك توك 1080×1920",
+          "detail": ""
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "K",
+      "title": "مسار المعاينة عند الطلب",
+      "pass": true,
+      "seconds": 4,
+      "checks": [
+        {
+          "ok": true,
+          "label": "معاينة الغلاف فقط تعمل",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "المعاينة التزمت بالنطاق المطلوب (الغلاف فقط)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا تسليم نهائي قبل الموافقة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1350 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "L",
+      "title": "التسليم المباشر الافتراضي",
+      "pass": true,
+      "seconds": 2.6,
+      "checks": [
+        {
+          "ok": true,
+          "label": "أمر التصيير انتهى بنجاح (exit 0)",
+          "detail": "exit=0"
+        },
+        {
+          "ok": true,
+          "label": "فحص الجودة الآلي بلا أخطاء",
+          "detail": "errors=0"
+        },
+        {
+          "ok": true,
+          "label": "عدد الصور 5",
+          "detail": "found=5"
+        },
+        {
+          "ok": true,
+          "label": "كل الصور بالأبعاد 1080×1920 بالضبط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف ZIP للشرائح موجود",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP يحتوي 5 صورة",
+          "detail": "zip=5"
+        },
+        {
+          "ok": true,
+          "label": "حزمة المصدر القابلة للتعديل (HTML/CSS) موجودة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ملف HTML قابل للتعديل لكل شريحة",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "كل النصوص رُسمت بالخطوط المحددة (لا بديل نظام)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "سطر «سياق كاروسيل إحدى منتجات نطاق» غير موجود في التصاميم",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "لا توجد مرحلة معاينة أو موافقة",
+          "detail": ""
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "M",
+      "title": "تعديل شريحة واحدة مع حفظ النسخ السابقة",
+      "pass": true,
+      "seconds": 4,
+      "checks": [
+        {
+          "ok": true,
+          "label": "التصيير الأول",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "إعادة تصيير الشريحة ٣ فقط",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "الشريحة ٣ تغيّرت",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "باقي الشرائح لم تُلمس (نفس البصمة)",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "النسخة السابقة محفوظة (PNG + HTML)",
+          "detail": "v1-2026-10-03T10-12-59.html, v1-2026-10-03T10-12-59.png"
+        },
+        {
+          "ok": true,
+          "label": "النسخة المحفوظة هي الصورة القديمة نفسها",
+          "detail": ""
+        },
+        {
+          "ok": true,
+          "label": "ZIP بعد التعديل يحتوي الشرائح الخمس الحالية",
+          "detail": ""
+        }
+      ],
+      "error": null
+    }
+  ]
+}

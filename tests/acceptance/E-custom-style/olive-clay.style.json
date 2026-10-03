@@ -1,0 +1,10 @@
+{
+  "id": "olive-clay",
+  "name_ar": "طين وزيتون",
+  "base": "editorial",
+  "source_ar": "من وصف المستخدم: هادئ، مستوحى من الطين والزيتون، ملمس ورق خشن، عناوين نسخ أنيقة، بدون ألوان صارخة.",
+  "tokens": { "bg": "#EDE4D3", "bg2": "#E2D5BE", "surface": "#F6F0E4", "ink": "#2E2A22", "muted": "#5E5546", "accent": "#5F6B3A", "accent2": "#A4573A", "line": "#5F6B3A",
+    "headFont": "amiri", "bodyFont": "ibm-plex-sans-arabic", "accentFont": "markazi-text", "headWeight": 700, "lhHead": 1.45, "radius": 18 },
+  "traits": ["paper", "grain", "rounded"],
+  "removeTraits": ["sharp"]
+}

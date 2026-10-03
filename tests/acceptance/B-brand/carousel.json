@@ -1,0 +1,110 @@
+{
+ "meta": {
+  "title": "قهوتك المختصة",
+  "slug": "brand-test",
+  "testFixture": "بيانات اختبار: العلامة والشعار والحسابات والسعر خيالية لمحاكاة ما يرفعه المستخدم."
+ },
+ "canvas": {
+  "platform": "instagram-portrait"
+ },
+ "style": {
+  "preset": "product",
+  "palette": "studio"
+ },
+ "brand": {
+  "name": "محمصة الريحان",
+  "logo": "../../fixtures/logo-test-brand.png",
+  "colors": {
+   "primary": "#1F4D3A",
+   "secondary": "#C8963E",
+   "background": "#F6F1E7"
+  },
+  "handles": [
+   {
+    "platform": "instagram",
+    "handle": "alraihan.test"
+   },
+   {
+    "platform": "whatsapp",
+    "handle": "+966 50 000 0000"
+   }
+  ],
+  "contact": {
+   "website": "example.com/menu"
+  }
+ },
+ "chrome": {
+  "logo": "all",
+  "handle": "all"
+ },
+ "slides": [
+  {
+   "layout": "cover",
+   "kicker": "محمصة محلية",
+   "title": "قهوتك تستاهل **تحميص طازج**",
+   "subtitle": "نحمّص كل أسبوع بكميات صغيرة عشان توصلك النكهة كاملة."
+  },
+  {
+   "layout": "list",
+   "variant": "grid",
+   "title": "وش نقدّم لك؟",
+   "items": [
+    {
+     "icon": "mug-hot",
+     "title": "إسبريسو",
+     "text": "تحميص متوسط متوازن"
+    },
+    {
+     "icon": "leaf",
+     "title": "قهوة مقطّرة",
+     "text": "محاصيل أحادية المصدر"
+    },
+    {
+     "icon": "gift",
+     "title": "هدايا",
+     "text": "بوكسات جاهزة للمناسبات"
+    },
+    {
+     "icon": "truck",
+     "title": "توصيل",
+     "text": "داخل المدينة"
+    }
+   ]
+  },
+  {
+   "layout": "steps",
+   "title": "كيف تطلب؟",
+   "steps": [
+    {
+     "title": "اختر محصولك",
+     "text": "من قائمتنا الأسبوعية."
+    },
+    {
+     "title": "حدد الطحنة",
+     "text": "حسب طريقة التحضير عندك."
+    },
+    {
+     "title": "استلم طلبك",
+     "text": "توصيل أو استلام من المحمصة."
+    }
+   ]
+  },
+  {
+   "layout": "statement",
+   "variant": "center",
+   "label": "وعدنا لك",
+   "text": "ما نبيع قهوة **عمرها** أكثر من شهر من التحميص.",
+   "support": "تاريخ التحميص مكتوب على كل كيس."
+  },
+  {
+   "layout": "cta",
+   "kicker": "جاهز تجرب؟",
+   "title": "اطلب كيسك الأول اليوم",
+   "action": "اطلب الآن",
+   "qr": {
+    "url": "https://example.com/menu",
+    "label": "امسح الرمز لفتح القائمة"
+   }
+  }
+ ]
+}
